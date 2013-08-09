@@ -161,4 +161,6 @@
           <p>To establish licensure for commercial interior design professionals, whose work impacts the health, safety, and welfare, of the public in the state of Oregon.</p>
         </div>
 
+        
+
 <?php get_footer(); ?>
