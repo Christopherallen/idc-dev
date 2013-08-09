@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 3.2.4
+-- version 4.0.4.1
 -- http://www.phpmyadmin.net
 --
--- Host: localhost:3306
--- Generation Time: Aug 09, 2013 at 10:06 PM
--- Server version: 5.1.44
--- PHP Version: 5.3.1
+-- Host: 127.0.0.1
+-- Generation Time: Aug 10, 2013 at 01:45 AM
+-- Server version: 5.5.32
+-- PHP Version: 5.4.16
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -18,6 +19,8 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 --
 -- Database: `wp`
 --
+CREATE DATABASE IF NOT EXISTS `wp` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `wp`;
 
 -- --------------------------------------------------------
 
@@ -34,11 +37,6 @@ CREATE TABLE IF NOT EXISTS `wp_commentmeta` (
   KEY `comment_id` (`comment_id`),
   KEY `meta_key` (`meta_key`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
---
--- Dumping data for table `wp_commentmeta`
---
-
 
 -- --------------------------------------------------------
 
@@ -101,11 +99,6 @@ CREATE TABLE IF NOT EXISTS `wp_links` (
   KEY `link_visible` (`link_visible`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
---
--- Dumping data for table `wp_links`
---
-
-
 -- --------------------------------------------------------
 
 --
@@ -119,7 +112,7 @@ CREATE TABLE IF NOT EXISTS `wp_options` (
   `autoload` varchar(20) NOT NULL DEFAULT 'yes',
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=388 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=405 ;
 
 --
 -- Dumping data for table `wp_options`
@@ -227,16 +220,16 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (99, 'cron', 'a:4:{i:1376094093;a:3:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1376094097;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1376112957;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
 (342, '_site_transient_update_core', 'O:8:"stdClass":3:{s:7:"updates";a:1:{i:0;O:8:"stdClass":9:{s:8:"response";s:6:"latest";s:8:"download";s:38:"http://wordpress.org/wordpress-3.6.zip";s:6:"locale";s:5:"en_US";s:8:"packages";O:8:"stdClass":4:{s:4:"full";s:38:"http://wordpress.org/wordpress-3.6.zip";s:10:"no_content";s:49:"http://wordpress.org/wordpress-3.6-no-content.zip";s:11:"new_bundled";s:50:"http://wordpress.org/wordpress-3.6-new-bundled.zip";s:7:"partial";b:0;}s:7:"current";s:3:"3.6";s:11:"php_version";s:5:"5.2.4";s:13:"mysql_version";s:3:"5.0";s:11:"new_bundled";s:3:"3.6";s:15:"partial_version";s:0:"";}}s:12:"last_checked";i:1376066497;s:15:"version_checked";s:3:"3.6";}', 'yes'),
 (102, '_site_transient_update_plugins', 'O:8:"stdClass":3:{s:12:"last_checked";i:1376080782;s:7:"checked";a:5:{s:30:"advanced-custom-fields/acf.php";s:5:"4.2.0";s:19:"akismet/akismet.php";s:5:"2.5.8";s:9:"hello.php";s:3:"1.6";s:23:"pinterest/pinterest.php";s:3:"1.0";s:19:"addthis/addthis.php";s:4:"beta";}s:8:"response";a:2:{s:19:"akismet/akismet.php";O:8:"stdClass":5:{s:2:"id";s:2:"15";s:4:"slug";s:7:"akismet";s:11:"new_version";s:5:"2.5.9";s:3:"url";s:37:"http://wordpress.org/plugins/akismet/";s:7:"package";s:55:"http://downloads.wordpress.org/plugin/akismet.2.5.9.zip";}s:19:"addthis/addthis.php";O:8:"stdClass":6:{s:2:"id";s:4:"5710";s:4:"slug";s:7:"addthis";s:11:"new_version";s:3:"3.1";s:14:"upgrade_notice";s:29:"Bug fixes, better validations";s:3:"url";s:37:"http://wordpress.org/plugins/addthis/";s:7:"package";s:53:"http://downloads.wordpress.org/plugin/addthis.3.1.zip";}}}', 'yes'),
-(348, '_site_transient_timeout_theme_roots', '1376068297', 'yes'),
-(349, '_site_transient_theme_roots', 'a:5:{s:3:"IDC";s:7:"/themes";s:12:"twentyeleven";s:7:"/themes";s:14:"twentythirteen";s:7:"/themes";s:18:"twentytwelve-child";s:7:"/themes";s:12:"twentytwelve";s:7:"/themes";}', 'yes'),
-(105, '_site_transient_update_themes', 'O:8:"stdClass":3:{s:12:"last_checked";i:1376067562;s:7:"checked";a:5:{s:3:"IDC";s:4:"Beta";s:12:"twentyeleven";s:3:"1.5";s:14:"twentythirteen";s:3:"1.0";s:18:"twentytwelve-child";s:5:"0.1.0";s:12:"twentytwelve";s:3:"1.2";}s:8:"response";a:0:{}}', 'yes'),
+(401, '_site_transient_timeout_theme_roots', '1376092271', 'yes'),
+(402, '_site_transient_theme_roots', 'a:5:{s:3:"IDC";s:7:"/themes";s:12:"twentyeleven";s:7:"/themes";s:14:"twentythirteen";s:7:"/themes";s:18:"twentytwelve-child";s:7:"/themes";s:12:"twentytwelve";s:7:"/themes";}', 'yes'),
+(105, '_site_transient_update_themes', 'O:8:"stdClass":3:{s:12:"last_checked";i:1376087279;s:7:"checked";a:4:{s:3:"IDC";s:4:"Beta";s:12:"twentyeleven";s:3:"1.5";s:14:"twentythirteen";s:3:"1.0";s:12:"twentytwelve";s:3:"1.2";}s:8:"response";a:0:{}}', 'yes'),
 (139, '_site_transient_timeout_browser_a6525c6a9a32c0322251dae6021a5ea8', '1375148659', 'yes'),
 (140, '_site_transient_browser_a6525c6a9a32c0322251dae6021a5ea8', 'a:9:{s:8:"platform";s:9:"Macintosh";s:4:"name";s:6:"Chrome";s:7:"version";s:12:"28.0.1500.71";s:10:"update_url";s:28:"http://www.google.com/chrome";s:7:"img_src";s:49:"http://s.wordpress.org/images/browsers/chrome.png";s:11:"img_src_ssl";s:48:"https://wordpress.org/images/browsers/chrome.png";s:15:"current_version";s:2:"18";s:7:"upgrade";b:0;s:8:"insecure";b:0;}', 'yes'),
 (108, 'dashboard_widget_options', 'a:4:{s:25:"dashboard_recent_comments";a:1:{s:5:"items";i:5;}s:24:"dashboard_incoming_links";a:5:{s:4:"home";s:19:"http://localhost/wp";s:4:"link";s:95:"http://blogsearch.google.com/blogsearch?scoring=d&partner=wordpress&q=link:http://localhost/wp/";s:3:"url";s:128:"http://blogsearch.google.com/blogsearch_feeds?scoring=d&ie=utf-8&num=10&output=rss&partner=wordpress&q=link:http://localhost/wp/";s:5:"items";i:10;s:9:"show_date";b:0;}s:17:"dashboard_primary";a:7:{s:4:"link";s:26:"http://wordpress.org/news/";s:3:"url";s:31:"http://wordpress.org/news/feed/";s:5:"title";s:14:"WordPress Blog";s:5:"items";i:2;s:12:"show_summary";i:1;s:11:"show_author";i:0;s:9:"show_date";i:1;}s:19:"dashboard_secondary";a:7:{s:4:"link";s:28:"http://planet.wordpress.org/";s:3:"url";s:33:"http://planet.wordpress.org/feed/";s:5:"title";s:20:"Other WordPress News";s:5:"items";i:5;s:12:"show_summary";i:0;s:11:"show_author";i:0;s:9:"show_date";i:0;}}', 'yes'),
 (341, 'db_upgraded', '', 'yes'),
 (336, '_site_transient_timeout_poptags_40cd750bba9870f18aada2478b24840a', '1376039513', 'yes'),
-(350, '_site_transient_timeout_wporg_theme_feature_list', '1376078362', 'yes'),
-(351, '_site_transient_wporg_theme_feature_list', 'a:5:{s:6:"Colors";a:15:{i:0;s:5:"black";i:1;s:4:"blue";i:2;s:5:"brown";i:3;s:4:"gray";i:4;s:5:"green";i:5;s:6:"orange";i:6;s:4:"pink";i:7;s:6:"purple";i:8;s:3:"red";i:9;s:6:"silver";i:10;s:3:"tan";i:11;s:5:"white";i:12;s:6:"yellow";i:13;s:4:"dark";i:14;s:5:"light";}s:7:"Columns";a:6:{i:0;s:10:"one-column";i:1;s:11:"two-columns";i:2;s:13:"three-columns";i:3;s:12:"four-columns";i:4;s:12:"left-sidebar";i:5;s:13:"right-sidebar";}s:5:"Width";a:2:{i:0;s:11:"fixed-width";i:1;s:14:"flexible-width";}s:8:"Features";a:19:{i:0;s:8:"blavatar";i:1;s:10:"buddypress";i:2;s:17:"custom-background";i:3;s:13:"custom-colors";i:4;s:13:"custom-header";i:5;s:11:"custom-menu";i:6;s:12:"editor-style";i:7;s:21:"featured-image-header";i:8;s:15:"featured-images";i:9;s:15:"flexible-header";i:10;s:20:"front-page-post-form";i:11;s:19:"full-width-template";i:12;s:12:"microformats";i:13;s:12:"post-formats";i:14;s:20:"rtl-language-support";i:15;s:11:"sticky-post";i:16;s:13:"theme-options";i:17;s:17:"threaded-comments";i:18;s:17:"translation-ready";}s:7:"Subject";a:3:{i:0;s:7:"holiday";i:1;s:13:"photoblogging";i:2;s:8:"seasonal";}}', 'yes'),
+(392, '_site_transient_timeout_wporg_theme_feature_list', '1376098080', 'yes'),
+(393, '_site_transient_wporg_theme_feature_list', 'a:5:{s:6:"Colors";a:15:{i:0;s:5:"black";i:1;s:4:"blue";i:2;s:5:"brown";i:3;s:4:"gray";i:4;s:5:"green";i:5;s:6:"orange";i:6;s:4:"pink";i:7;s:6:"purple";i:8;s:3:"red";i:9;s:6:"silver";i:10;s:3:"tan";i:11;s:5:"white";i:12;s:6:"yellow";i:13;s:4:"dark";i:14;s:5:"light";}s:7:"Columns";a:6:{i:0;s:10:"one-column";i:1;s:11:"two-columns";i:2;s:13:"three-columns";i:3;s:12:"four-columns";i:4;s:12:"left-sidebar";i:5;s:13:"right-sidebar";}s:5:"Width";a:2:{i:0;s:11:"fixed-width";i:1;s:14:"flexible-width";}s:8:"Features";a:19:{i:0;s:8:"blavatar";i:1;s:10:"buddypress";i:2;s:17:"custom-background";i:3;s:13:"custom-colors";i:4;s:13:"custom-header";i:5;s:11:"custom-menu";i:6;s:12:"editor-style";i:7;s:21:"featured-image-header";i:8;s:15:"featured-images";i:9;s:15:"flexible-header";i:10;s:20:"front-page-post-form";i:11;s:19:"full-width-template";i:12;s:12:"microformats";i:13;s:12:"post-formats";i:14;s:20:"rtl-language-support";i:15;s:11:"sticky-post";i:16;s:13:"theme-options";i:17;s:17:"threaded-comments";i:18;s:17:"translation-ready";}s:7:"Subject";a:3:{i:0;s:7:"holiday";i:1;s:13:"photoblogging";i:2;s:8:"seasonal";}}', 'yes'),
 (253, '_site_transient_timeout_browser_539c9da9334b43fbacc5ea717b084fd9', '1376276302', 'yes'),
 (254, '_site_transient_browser_539c9da9334b43fbacc5ea717b084fd9', 'a:9:{s:8:"platform";s:9:"Macintosh";s:4:"name";s:6:"Chrome";s:7:"version";s:12:"28.0.1500.95";s:10:"update_url";s:28:"http://www.google.com/chrome";s:7:"img_src";s:49:"http://s.wordpress.org/images/browsers/chrome.png";s:11:"img_src_ssl";s:48:"https://wordpress.org/images/browsers/chrome.png";s:15:"current_version";s:2:"18";s:7:"upgrade";b:0;s:8:"insecure";b:0;}', 'yes'),
 (329, '_transient_timeout_plugin_slugs', '1376167183', 'no'),
@@ -292,7 +285,9 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (380, '_transient_timeout_feed_mod_77fa140e07ce53fe8c87136636f83d72', '1376124290', 'no'),
 (381, '_transient_feed_mod_77fa140e07ce53fe8c87136636f83d72', '1376081090', 'no'),
 (382, '_transient_timeout_dash_de3249c4736ad3bd2cd29147c4a0d43e', '1376124291', 'no'),
-(383, '_transient_dash_de3249c4736ad3bd2cd29147c4a0d43e', '<h4>Most Popular</h4>\n<h5><a href=''http://wordpress.org/plugins/woocommerce/''>WooCommerce - excelling eCommerce</a></h5>&nbsp;<span>(<a href=''plugin-install.php?tab=plugin-information&amp;plugin=woocommerce&amp;_wpnonce=5da4cfd2c7&amp;TB_iframe=true&amp;width=600&amp;height=800'' class=''thickbox'' title=''WooCommerce - excelling eCommerce''>Install</a>)</span>\n<p>WooCommerce is a powerful, extendable eCommerce plugin that helps you sell anything. Beautifully.</p>\n<h4>Newest Plugins</h4>\n<h5><a href=''http://wordpress.org/plugins/edd-checkout-notes/''>Easy Digital Downloads - Checkout Notes</a></h5>&nbsp;<span>(<a href=''plugin-install.php?tab=plugin-information&amp;plugin=edd-checkout-notes&amp;_wpnonce=3248a319c6&amp;TB_iframe=true&amp;width=600&amp;height=800'' class=''thickbox'' title=''Easy Digital Downloads - Checkout Notes''>Install</a>)</span>\n<p>Add a textarea to the checkout form where customers can leave notes about their order.</p>\n', 'no');
+(383, '_transient_dash_de3249c4736ad3bd2cd29147c4a0d43e', '<h4>Most Popular</h4>\n<h5><a href=''http://wordpress.org/plugins/woocommerce/''>WooCommerce - excelling eCommerce</a></h5>&nbsp;<span>(<a href=''plugin-install.php?tab=plugin-information&amp;plugin=woocommerce&amp;_wpnonce=5da4cfd2c7&amp;TB_iframe=true&amp;width=600&amp;height=800'' class=''thickbox'' title=''WooCommerce - excelling eCommerce''>Install</a>)</span>\n<p>WooCommerce is a powerful, extendable eCommerce plugin that helps you sell anything. Beautifully.</p>\n<h4>Newest Plugins</h4>\n<h5><a href=''http://wordpress.org/plugins/edd-checkout-notes/''>Easy Digital Downloads - Checkout Notes</a></h5>&nbsp;<span>(<a href=''plugin-install.php?tab=plugin-information&amp;plugin=edd-checkout-notes&amp;_wpnonce=3248a319c6&amp;TB_iframe=true&amp;width=600&amp;height=800'' class=''thickbox'' title=''Easy Digital Downloads - Checkout Notes''>Install</a>)</span>\n<p>Add a textarea to the checkout form where customers can leave notes about their order.</p>\n', 'no'),
+(388, '_site_transient_timeout_browser_89d89c49036b4cfdace3f106715ed060', '1376691337', 'yes'),
+(389, '_site_transient_browser_89d89c49036b4cfdace3f106715ed060', 'a:9:{s:8:"platform";s:7:"Windows";s:4:"name";s:6:"Chrome";s:7:"version";s:12:"28.0.1500.95";s:10:"update_url";s:28:"http://www.google.com/chrome";s:7:"img_src";s:49:"http://s.wordpress.org/images/browsers/chrome.png";s:11:"img_src_ssl";s:48:"https://wordpress.org/images/browsers/chrome.png";s:15:"current_version";s:2:"18";s:7:"upgrade";b:0;s:8:"insecure";b:0;}', 'yes');
 
 -- --------------------------------------------------------
 
@@ -308,7 +303,7 @@ CREATE TABLE IF NOT EXISTS `wp_postmeta` (
   PRIMARY KEY (`meta_id`),
   KEY `post_id` (`post_id`),
   KEY `meta_key` (`meta_key`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=25 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=502 ;
 
 --
 -- Dumping data for table `wp_postmeta`
@@ -329,11 +324,298 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (14, 11, 'layout', 'no_box'),
 (15, 11, 'hide_on_screen', ''),
 (21, 11, 'rule', 'a:5:{s:5:"param";s:4:"page";s:8:"operator";s:2:"==";s:5:"value";s:2:"12";s:8:"order_no";i:0;s:8:"group_no";i:0;}'),
-(18, 2, '_edit_lock', '1376080839:1'),
-(19, 12, '_edit_last', '1'),
-(20, 12, '_edit_lock', '1376085928:1'),
+(18, 2, '_edit_lock', '1376090008:2'),
+(19, 12, '_edit_last', '2'),
+(20, 12, '_edit_lock', '1376089391:2'),
 (23, 12, 'donate', 'DO YOU KNOW WHAT IT FEELS LIKE'),
-(24, 12, '_donate', 'field_520553d4f2804');
+(24, 12, '_donate', 'field_520553d4f2804'),
+(494, 109, '_menu_item_menu_item_parent', '0'),
+(493, 109, '_menu_item_type', 'post_type'),
+(491, 108, '_menu_item_url', ''),
+(490, 108, '_menu_item_xfn', ''),
+(489, 108, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(44, 18, 'donate', 'DO YOU KNOW WHAT IT FEELS LIKE'),
+(488, 108, '_menu_item_target', ''),
+(487, 108, '_menu_item_object', 'page'),
+(486, 108, '_menu_item_object_id', '91'),
+(485, 108, '_menu_item_menu_item_parent', '0'),
+(484, 108, '_menu_item_type', 'post_type'),
+(43, 17, '_edit_lock', '1376089451:2'),
+(45, 18, '_donate', 'field_520553d4f2804'),
+(46, 19, '_edit_last', '2'),
+(47, 19, '_edit_lock', '1376089434:2'),
+(48, 21, '_edit_lock', '1376089736:2'),
+(58, 24, '_edit_last', '2'),
+(59, 24, '_edit_lock', '1376089987:2'),
+(60, 2, '_edit_last', '2'),
+(61, 27, '_edit_last', '2'),
+(62, 27, '_edit_lock', '1376090024:2'),
+(63, 29, '_edit_last', '2'),
+(64, 29, '_edit_lock', '1376090055:2'),
+(65, 32, '_edit_last', '2'),
+(66, 32, '_edit_lock', '1376090067:2'),
+(67, 34, '_edit_last', '2'),
+(68, 34, '_edit_lock', '1376090085:2'),
+(69, 36, '_edit_last', '2'),
+(70, 36, '_edit_lock', '1376090099:2'),
+(71, 38, '_edit_lock', '1376090127:2'),
+(72, 38, '_edit_last', '2'),
+(73, 40, '_edit_last', '2'),
+(74, 40, '_edit_lock', '1376090142:2'),
+(75, 42, '_edit_last', '2'),
+(76, 42, '_edit_lock', '1376090160:2'),
+(77, 44, '_edit_last', '2'),
+(78, 44, '_edit_lock', '1376090173:2'),
+(79, 46, '_edit_last', '2'),
+(80, 46, '_edit_lock', '1376090187:2'),
+(81, 48, '_edit_last', '2'),
+(82, 48, '_edit_lock', '1376090202:2'),
+(83, 50, '_edit_last', '2'),
+(84, 50, '_edit_lock', '1376090215:2'),
+(85, 52, '_edit_last', '2'),
+(86, 52, '_edit_lock', '1376090229:2'),
+(87, 54, '_edit_last', '2'),
+(88, 54, '_edit_lock', '1376090239:2'),
+(482, 107, '_menu_item_url', ''),
+(481, 107, '_menu_item_xfn', ''),
+(480, 107, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(479, 107, '_menu_item_target', ''),
+(478, 107, '_menu_item_object', 'page'),
+(237, 73, '_menu_item_target', ''),
+(477, 107, '_menu_item_object_id', '2'),
+(476, 107, '_menu_item_menu_item_parent', '0'),
+(475, 107, '_menu_item_type', 'post_type'),
+(473, 106, '_menu_item_url', ''),
+(472, 106, '_menu_item_xfn', ''),
+(236, 73, '_menu_item_object', 'page'),
+(471, 106, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(470, 106, '_menu_item_target', ''),
+(469, 106, '_menu_item_object', 'page'),
+(468, 106, '_menu_item_object_id', '32'),
+(235, 73, '_menu_item_object_id', '24'),
+(467, 106, '_menu_item_menu_item_parent', '0'),
+(466, 106, '_menu_item_type', 'post_type'),
+(464, 105, '_menu_item_url', ''),
+(463, 105, '_menu_item_xfn', ''),
+(462, 105, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(234, 73, '_menu_item_menu_item_parent', '72'),
+(461, 105, '_menu_item_target', ''),
+(460, 105, '_menu_item_object', 'page'),
+(459, 105, '_menu_item_object_id', '54'),
+(458, 105, '_menu_item_menu_item_parent', '0'),
+(457, 105, '_menu_item_type', 'post_type'),
+(233, 73, '_menu_item_type', 'post_type'),
+(456, 104, '_menu_item_orphaned', '1376091171'),
+(455, 104, '_menu_item_url', ''),
+(454, 104, '_menu_item_xfn', ''),
+(453, 104, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(452, 104, '_menu_item_target', ''),
+(451, 104, '_menu_item_object', 'page'),
+(450, 104, '_menu_item_object_id', '12'),
+(449, 104, '_menu_item_menu_item_parent', '0'),
+(448, 104, '_menu_item_type', 'post_type'),
+(446, 103, '_menu_item_url', ''),
+(445, 103, '_menu_item_xfn', ''),
+(231, 72, '_menu_item_url', ''),
+(444, 103, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(441, 103, '_menu_item_object_id', '12'),
+(442, 103, '_menu_item_object', 'page'),
+(437, 102, '_menu_item_url', ''),
+(436, 102, '_menu_item_xfn', ''),
+(435, 102, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(230, 72, '_menu_item_xfn', ''),
+(434, 102, '_menu_item_target', ''),
+(433, 102, '_menu_item_object', 'page'),
+(432, 102, '_menu_item_object_id', '93'),
+(431, 102, '_menu_item_menu_item_parent', '99'),
+(430, 102, '_menu_item_type', 'post_type'),
+(440, 103, '_menu_item_menu_item_parent', '0'),
+(428, 101, '_menu_item_url', ''),
+(427, 101, '_menu_item_xfn', ''),
+(426, 101, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(425, 101, '_menu_item_target', ''),
+(424, 101, '_menu_item_object', 'page'),
+(229, 72, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(423, 101, '_menu_item_object_id', '95'),
+(422, 101, '_menu_item_menu_item_parent', '99'),
+(421, 101, '_menu_item_type', 'post_type'),
+(439, 103, '_menu_item_type', 'post_type'),
+(419, 100, '_menu_item_url', ''),
+(418, 100, '_menu_item_xfn', ''),
+(228, 72, '_menu_item_target', ''),
+(417, 100, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(416, 100, '_menu_item_target', ''),
+(415, 100, '_menu_item_object', 'page'),
+(414, 100, '_menu_item_object_id', '97'),
+(227, 72, '_menu_item_object', 'page'),
+(413, 100, '_menu_item_menu_item_parent', '99'),
+(412, 100, '_menu_item_type', 'post_type'),
+(443, 103, '_menu_item_target', ''),
+(410, 99, '_menu_item_url', ''),
+(409, 99, '_menu_item_xfn', ''),
+(408, 99, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(226, 72, '_menu_item_object_id', '12'),
+(407, 99, '_menu_item_target', ''),
+(406, 99, '_menu_item_object', 'page'),
+(405, 99, '_menu_item_object_id', '91'),
+(404, 99, '_menu_item_menu_item_parent', '0'),
+(403, 99, '_menu_item_type', 'post_type'),
+(402, 97, '_edit_lock', '1376090728:2'),
+(225, 72, '_menu_item_menu_item_parent', '0'),
+(401, 97, '_edit_last', '2'),
+(400, 95, '_edit_lock', '1376090715:2'),
+(399, 95, '_edit_last', '2'),
+(398, 93, '_edit_lock', '1376090704:2'),
+(397, 93, '_edit_last', '2'),
+(396, 91, '_edit_lock', '1376090691:2'),
+(395, 91, '_edit_last', '2'),
+(224, 72, '_menu_item_type', 'post_type'),
+(238, 73, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(239, 73, '_menu_item_xfn', ''),
+(240, 73, '_menu_item_url', ''),
+(242, 74, '_menu_item_type', 'post_type'),
+(243, 74, '_menu_item_menu_item_parent', '72'),
+(244, 74, '_menu_item_object_id', '19'),
+(245, 74, '_menu_item_object', 'page'),
+(246, 74, '_menu_item_target', ''),
+(247, 74, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(248, 74, '_menu_item_xfn', ''),
+(249, 74, '_menu_item_url', ''),
+(251, 75, '_menu_item_type', 'post_type'),
+(252, 75, '_menu_item_menu_item_parent', '0'),
+(253, 75, '_menu_item_object_id', '12'),
+(254, 75, '_menu_item_object', 'page'),
+(255, 75, '_menu_item_target', ''),
+(256, 75, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(257, 75, '_menu_item_xfn', ''),
+(258, 75, '_menu_item_url', ''),
+(259, 75, '_menu_item_orphaned', '1376090720'),
+(260, 76, '_menu_item_type', 'post_type'),
+(261, 76, '_menu_item_menu_item_parent', '0'),
+(262, 76, '_menu_item_object_id', '54'),
+(263, 76, '_menu_item_object', 'page'),
+(264, 76, '_menu_item_target', ''),
+(265, 76, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(266, 76, '_menu_item_xfn', ''),
+(267, 76, '_menu_item_url', ''),
+(269, 77, '_menu_item_type', 'post_type'),
+(270, 77, '_menu_item_menu_item_parent', '0'),
+(271, 77, '_menu_item_object_id', '32'),
+(272, 77, '_menu_item_object', 'page'),
+(273, 77, '_menu_item_target', ''),
+(274, 77, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(275, 77, '_menu_item_xfn', ''),
+(276, 77, '_menu_item_url', ''),
+(278, 78, '_menu_item_type', 'post_type'),
+(279, 78, '_menu_item_menu_item_parent', '77'),
+(280, 78, '_menu_item_object_id', '42'),
+(281, 78, '_menu_item_object', 'page'),
+(282, 78, '_menu_item_target', ''),
+(283, 78, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(284, 78, '_menu_item_xfn', ''),
+(285, 78, '_menu_item_url', ''),
+(287, 79, '_menu_item_type', 'post_type'),
+(288, 79, '_menu_item_menu_item_parent', '77'),
+(289, 79, '_menu_item_object_id', '36'),
+(290, 79, '_menu_item_object', 'page'),
+(291, 79, '_menu_item_target', ''),
+(292, 79, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(293, 79, '_menu_item_xfn', ''),
+(294, 79, '_menu_item_url', ''),
+(296, 80, '_menu_item_type', 'post_type'),
+(297, 80, '_menu_item_menu_item_parent', '77'),
+(298, 80, '_menu_item_object_id', '38'),
+(299, 80, '_menu_item_object', 'page'),
+(300, 80, '_menu_item_target', ''),
+(301, 80, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(302, 80, '_menu_item_xfn', ''),
+(303, 80, '_menu_item_url', ''),
+(305, 81, '_menu_item_type', 'post_type'),
+(306, 81, '_menu_item_menu_item_parent', '77'),
+(307, 81, '_menu_item_object_id', '34'),
+(308, 81, '_menu_item_object', 'page'),
+(309, 81, '_menu_item_target', ''),
+(310, 81, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(311, 81, '_menu_item_xfn', ''),
+(312, 81, '_menu_item_url', ''),
+(314, 82, '_menu_item_type', 'post_type'),
+(315, 82, '_menu_item_menu_item_parent', '77'),
+(316, 82, '_menu_item_object_id', '40'),
+(317, 82, '_menu_item_object', 'page'),
+(318, 82, '_menu_item_target', ''),
+(319, 82, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(320, 82, '_menu_item_xfn', ''),
+(321, 82, '_menu_item_url', ''),
+(323, 83, '_menu_item_type', 'post_type'),
+(324, 83, '_menu_item_menu_item_parent', '0'),
+(325, 83, '_menu_item_object_id', '2'),
+(326, 83, '_menu_item_object', 'page'),
+(327, 83, '_menu_item_target', ''),
+(328, 83, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(329, 83, '_menu_item_xfn', ''),
+(330, 83, '_menu_item_url', ''),
+(500, 109, '_menu_item_url', ''),
+(332, 84, '_menu_item_type', 'post_type'),
+(333, 84, '_menu_item_menu_item_parent', '83'),
+(334, 84, '_menu_item_object_id', '29'),
+(335, 84, '_menu_item_object', 'page'),
+(336, 84, '_menu_item_target', ''),
+(337, 84, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(338, 84, '_menu_item_xfn', ''),
+(339, 84, '_menu_item_url', ''),
+(499, 109, '_menu_item_xfn', ''),
+(341, 85, '_menu_item_type', 'post_type'),
+(342, 85, '_menu_item_menu_item_parent', '83'),
+(343, 85, '_menu_item_object_id', '27'),
+(344, 85, '_menu_item_object', 'page'),
+(345, 85, '_menu_item_target', ''),
+(346, 85, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(347, 85, '_menu_item_xfn', ''),
+(348, 85, '_menu_item_url', ''),
+(350, 86, '_menu_item_type', 'post_type'),
+(351, 86, '_menu_item_menu_item_parent', '0'),
+(352, 86, '_menu_item_object_id', '44'),
+(353, 86, '_menu_item_object', 'page'),
+(354, 86, '_menu_item_target', ''),
+(355, 86, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(356, 86, '_menu_item_xfn', ''),
+(357, 86, '_menu_item_url', ''),
+(498, 109, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(359, 87, '_menu_item_type', 'post_type'),
+(360, 87, '_menu_item_menu_item_parent', '86'),
+(361, 87, '_menu_item_object_id', '52'),
+(362, 87, '_menu_item_object', 'page'),
+(363, 87, '_menu_item_target', ''),
+(364, 87, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(365, 87, '_menu_item_xfn', ''),
+(366, 87, '_menu_item_url', ''),
+(497, 109, '_menu_item_target', ''),
+(368, 88, '_menu_item_type', 'post_type'),
+(369, 88, '_menu_item_menu_item_parent', '86'),
+(370, 88, '_menu_item_object_id', '48'),
+(371, 88, '_menu_item_object', 'page'),
+(372, 88, '_menu_item_target', ''),
+(373, 88, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(374, 88, '_menu_item_xfn', ''),
+(375, 88, '_menu_item_url', ''),
+(496, 109, '_menu_item_object', 'page'),
+(377, 89, '_menu_item_type', 'post_type'),
+(378, 89, '_menu_item_menu_item_parent', '86'),
+(379, 89, '_menu_item_object_id', '50'),
+(380, 89, '_menu_item_object', 'page'),
+(381, 89, '_menu_item_target', ''),
+(382, 89, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(383, 89, '_menu_item_xfn', ''),
+(384, 89, '_menu_item_url', ''),
+(495, 109, '_menu_item_object_id', '44'),
+(386, 90, '_menu_item_type', 'post_type'),
+(387, 90, '_menu_item_menu_item_parent', '86'),
+(388, 90, '_menu_item_object_id', '46'),
+(389, 90, '_menu_item_object', 'page'),
+(390, 90, '_menu_item_target', ''),
+(391, 90, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(392, 90, '_menu_item_xfn', ''),
+(393, 90, '_menu_item_url', '');
 
 -- --------------------------------------------------------
 
@@ -370,7 +652,7 @@ CREATE TABLE IF NOT EXISTS `wp_posts` (
   KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=110 ;
 
 --
 -- Dumping data for table `wp_posts`
@@ -378,7 +660,7 @@ CREATE TABLE IF NOT EXISTS `wp_posts` (
 
 INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post_content`, `post_title`, `post_excerpt`, `post_status`, `comment_status`, `ping_status`, `post_password`, `post_name`, `to_ping`, `pinged`, `post_modified`, `post_modified_gmt`, `post_content_filtered`, `post_parent`, `guid`, `menu_order`, `post_type`, `post_mime_type`, `comment_count`) VALUES
 (1, 1, '2013-07-16 00:21:30', '2013-07-16 00:21:30', 'Welcome to WordPress. This is your first post. Edit or delete it, then start blogging!', 'Hello world!', '', 'publish', 'open', 'open', '', 'hello-world', '', '', '2013-07-16 00:21:30', '2013-07-16 00:21:30', '', 0, 'http://localhost/wp/?p=1', 0, 'post', '', 2),
-(2, 1, '2013-07-16 00:21:30', '2013-07-16 00:21:30', 'This is an example page. It''s different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors. It might say something like this:\n\n<blockquote>Hi there! I''m a bike messenger by day, aspiring actor by night, and this is my blog. I live in Los Angeles, have a great dog named Jack, and I like pi&#241;a coladas. (And gettin'' caught in the rain.)</blockquote>\n\n...or something like this:\n\n<blockquote>The XYZ Doohickey Company was founded in 1971, and has been providing quality doohickeys to the public ever since. Located in Gotham City, XYZ employs over 2,000 people and does all kinds of awesome things for the Gotham community.</blockquote>\n\nAs a new WordPress user, you should go to <a href="http://localhost/wp/wp-admin/">your dashboard</a> to delete this page and create new pages for your content. Have fun!', 'Sample Page', '', 'publish', 'open', 'open', '', 'sample-page', '', '', '2013-07-16 00:21:30', '2013-07-16 00:21:30', '', 0, 'http://localhost/wp/?page_id=2', 0, 'page', '', 0),
+(2, 1, '2013-07-16 00:21:30', '2013-07-16 00:21:30', 'This is an example page. It''s different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors. It might say something like this:\r\n<blockquote>Hi there! I''m a bike messenger by day, aspiring actor by night, and this is my blog. I live in Los Angeles, have a great dog named Jack, and I like piña coladas. (And gettin'' caught in the rain.)</blockquote>\r\n...or something like this:\r\n<blockquote>The XYZ Doohickey Company was founded in 1971, and has been providing quality doohickeys to the public ever since. Located in Gotham City, XYZ employs over 2,000 people and does all kinds of awesome things for the Gotham community.</blockquote>\r\nAs a new WordPress user, you should go to <a href="http://localhost/wp/wp-admin/">your dashboard</a> to delete this page and create new pages for your content. Have fun!', 'Legislation', '', 'publish', 'open', 'open', '', 'sample-page', '', '', '2013-08-09 23:15:17', '2013-08-09 23:15:17', '', 0, 'http://localhost/wp/?page_id=2', 0, 'page', '', 0),
 (5, 1, '2013-07-29 05:36:01', '2013-07-29 05:36:01', 't', 'this', '', 'inherit', 'open', 'open', '', '4-revision', '', '', '2013-07-29 05:36:01', '2013-07-29 05:36:01', '', 4, 'http://localhost/wp/?p=5', 0, 'revision', '', 0),
 (4, 1, '2013-07-29 05:36:02', '2013-07-29 05:36:02', 't', 'this', '', 'publish', 'open', 'open', '', 'this', '', '', '2013-07-29 05:36:02', '2013-07-29 05:36:02', '', 0, 'http://localhost/wp/?p=4', 0, 'post', '', 0),
 (7, 1, '2013-08-09 06:07:34', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2013-08-09 06:07:34', '0000-00-00 00:00:00', '', 0, 'http://localhost/wp/?p=7', 0, 'post', '', 0),
@@ -386,8 +668,86 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (9, 1, '2013-08-09 07:44:58', '2013-08-09 07:44:58', '', 'Testing', '', 'inherit', 'open', 'open', '', '8-revision', '', '', '2013-08-09 07:44:58', '2013-08-09 07:44:58', '', 8, 'http://localhost/wp/?p=9', 0, 'revision', '', 0),
 (10, 1, '2013-08-09 20:39:53', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2013-08-09 20:39:53', '0000-00-00 00:00:00', '', 0, 'http://localhost/wp/?post_type=acf&p=10', 0, 'acf', '', 0),
 (11, 1, '2013-08-09 20:41:23', '2013-08-09 20:41:23', '', 'Donate', '', 'publish', 'closed', 'closed', '', 'acf_donate', '', '', '2013-08-09 20:49:17', '2013-08-09 20:49:17', '', 0, 'http://localhost/wp/?post_type=acf&#038;p=11', 0, 'acf', '', 0),
-(12, 1, '2013-08-09 20:47:31', '2013-08-09 20:47:31', '', 'front page', '', 'publish', 'open', 'open', '', 'front-page', '', '', '2013-08-09 20:49:39', '2013-08-09 20:49:39', '', 0, 'http://localhost/wp/?page_id=12', 0, 'page', '', 0),
-(13, 1, '2013-08-09 20:47:31', '2013-08-09 20:47:31', '', 'front page', '', 'inherit', 'open', 'open', '', '12-revision-v1', '', '', '2013-08-09 20:47:31', '2013-08-09 20:47:31', '', 12, 'http://localhost/wp/?p=13', 0, 'revision', '', 0);
+(12, 1, '2013-08-09 20:47:31', '2013-08-09 20:47:31', '', 'About Us', '', 'publish', 'open', 'open', '', 'front-page', '', '', '2013-08-09 23:04:44', '2013-08-09 23:04:44', '', 0, 'http://localhost/wp/?page_id=12', 0, 'page', '', 0),
+(13, 1, '2013-08-09 20:47:31', '2013-08-09 20:47:31', '', 'front page', '', 'inherit', 'open', 'open', '', '12-revision-v1', '', '', '2013-08-09 20:47:31', '2013-08-09 20:47:31', '', 12, 'http://localhost/wp/?p=13', 0, 'revision', '', 0),
+(14, 2, '2013-08-09 22:15:37', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2013-08-09 22:15:37', '0000-00-00 00:00:00', '', 0, 'http://localhost/wp/?p=14', 0, 'post', '', 0),
+(106, 2, '2013-08-09 23:33:09', '2013-08-09 23:33:09', ' ', '', '', 'publish', 'open', 'open', '', '106', '', '', '2013-08-09 23:40:01', '2013-08-09 23:40:01', '', 0, 'http://localhost/wp/?p=106', 4, 'nav_menu_item', '', 0),
+(105, 2, '2013-08-09 23:33:09', '2013-08-09 23:33:09', ' ', '', '', 'publish', 'open', 'open', '', '105', '', '', '2013-08-09 23:40:01', '2013-08-09 23:40:01', '', 0, 'http://localhost/wp/?p=105', 6, 'nav_menu_item', '', 0),
+(104, 2, '2013-08-09 23:32:51', '0000-00-00 00:00:00', ' ', '', '', 'draft', 'open', 'open', '', '', '', '', '2013-08-09 23:32:51', '0000-00-00 00:00:00', '', 0, 'http://localhost/wp/?p=104', 1, 'nav_menu_item', '', 0),
+(17, 2, '2013-08-09 22:48:27', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2013-08-09 22:48:27', '0000-00-00 00:00:00', '', 0, 'http://localhost/wp/?page_id=17', 0, 'page', '', 0),
+(18, 2, '2013-08-09 23:04:33', '2013-08-09 23:04:33', '', 'About Us', '', 'inherit', 'open', 'open', '', '12-revision-v1', '', '', '2013-08-09 23:04:33', '2013-08-09 23:04:33', '', 12, 'http://localhost/wp/?p=18', 0, 'revision', '', 0),
+(19, 2, '2013-08-09 23:05:44', '2013-08-09 23:05:44', '', 'Meet the Collaborative', '', 'publish', 'open', 'open', '', 'meet-the-collaborative', '', '', '2013-08-09 23:05:44', '2013-08-09 23:05:44', '', 12, 'http://localhost/wp/?page_id=19', 0, 'page', '', 0),
+(20, 2, '2013-08-09 23:05:44', '2013-08-09 23:05:44', '', 'Meet the Collaborative', '', 'inherit', 'open', 'open', '', '19-revision-v1', '', '', '2013-08-09 23:05:44', '2013-08-09 23:05:44', '', 19, 'http://localhost/wp/?p=20', 0, 'revision', '', 0),
+(21, 2, '2013-08-09 23:05:48', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2013-08-09 23:05:48', '0000-00-00 00:00:00', '', 0, 'http://localhost/wp/?page_id=21', 0, 'page', '', 0),
+(23, 2, '2013-08-09 23:14:12', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2013-08-09 23:14:12', '0000-00-00 00:00:00', '', 0, 'http://localhost/wp/?page_id=23', 0, 'page', '', 0),
+(24, 2, '2013-08-09 23:14:47', '2013-08-09 23:14:47', '', 'FAQ''s', '', 'publish', 'open', 'open', '', 'faqs', '', '', '2013-08-09 23:14:47', '2013-08-09 23:14:47', '', 12, 'http://localhost/wp/?page_id=24', 0, 'page', '', 0),
+(25, 2, '2013-08-09 23:14:47', '2013-08-09 23:14:47', '', 'FAQ''s', '', 'inherit', 'open', 'open', '', '24-revision-v1', '', '', '2013-08-09 23:14:47', '2013-08-09 23:14:47', '', 24, 'http://localhost/wp/?p=25', 0, 'revision', '', 0),
+(26, 2, '2013-08-09 23:15:17', '2013-08-09 23:15:17', 'This is an example page. It''s different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors. It might say something like this:\r\n<blockquote>Hi there! I''m a bike messenger by day, aspiring actor by night, and this is my blog. I live in Los Angeles, have a great dog named Jack, and I like piña coladas. (And gettin'' caught in the rain.)</blockquote>\r\n...or something like this:\r\n<blockquote>The XYZ Doohickey Company was founded in 1971, and has been providing quality doohickeys to the public ever since. Located in Gotham City, XYZ employs over 2,000 people and does all kinds of awesome things for the Gotham community.</blockquote>\r\nAs a new WordPress user, you should go to <a href="http://localhost/wp/wp-admin/">your dashboard</a> to delete this page and create new pages for your content. Have fun!', 'Legislation', '', 'inherit', 'open', 'open', '', '2-revision-v1', '', '', '2013-08-09 23:15:17', '2013-08-09 23:15:17', '', 2, 'http://localhost/wp/?p=26', 0, 'revision', '', 0),
+(27, 2, '2013-08-09 23:15:32', '2013-08-09 23:15:32', '', 'Oregon', '', 'publish', 'open', 'open', '', 'oregon', '', '', '2013-08-09 23:15:32', '2013-08-09 23:15:32', '', 2, 'http://localhost/wp/?page_id=27', 0, 'page', '', 0),
+(28, 2, '2013-08-09 23:15:32', '2013-08-09 23:15:32', '', 'Oregon', '', 'inherit', 'open', 'open', '', '27-revision-v1', '', '', '2013-08-09 23:15:32', '2013-08-09 23:15:32', '', 27, 'http://localhost/wp/?p=28', 0, 'revision', '', 0),
+(29, 2, '2013-08-09 23:15:46', '2013-08-09 23:15:46', '', 'National', '', 'publish', 'open', 'open', '', 'national', '', '', '2013-08-09 23:16:06', '2013-08-09 23:16:06', '', 2, 'http://localhost/wp/?page_id=29', 0, 'page', '', 0),
+(30, 2, '2013-08-09 23:15:46', '2013-08-09 23:15:46', '', 'National', '', 'inherit', 'open', 'open', '', '29-revision-v1', '', '', '2013-08-09 23:15:46', '2013-08-09 23:15:46', '', 29, 'http://localhost/wp/?p=30', 0, 'revision', '', 0),
+(31, 2, '2013-08-09 23:15:50', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2013-08-09 23:15:50', '0000-00-00 00:00:00', '', 0, 'http://localhost/wp/?page_id=31', 0, 'page', '', 0),
+(32, 2, '2013-08-09 23:16:18', '2013-08-09 23:16:18', '', 'Get Involved', '', 'publish', 'open', 'open', '', 'get-involved', '', '', '2013-08-09 23:16:18', '2013-08-09 23:16:18', '', 0, 'http://localhost/wp/?page_id=32', 0, 'page', '', 0),
+(33, 2, '2013-08-09 23:16:18', '2013-08-09 23:16:18', '', 'Get Involved', '', 'inherit', 'open', 'open', '', '32-revision-v1', '', '', '2013-08-09 23:16:18', '2013-08-09 23:16:18', '', 32, 'http://localhost/wp/?p=33', 0, 'revision', '', 0),
+(34, 2, '2013-08-09 23:16:33', '2013-08-09 23:16:33', '', 'Volunteer', '', 'publish', 'open', 'open', '', 'volunteer', '', '', '2013-08-09 23:16:33', '2013-08-09 23:16:33', '', 32, 'http://localhost/wp/?page_id=34', 0, 'page', '', 0),
+(35, 2, '2013-08-09 23:16:33', '2013-08-09 23:16:33', '', 'Volunteer', '', 'inherit', 'open', 'open', '', '34-revision-v1', '', '', '2013-08-09 23:16:33', '2013-08-09 23:16:33', '', 34, 'http://localhost/wp/?p=35', 0, 'revision', '', 0),
+(36, 2, '2013-08-09 23:16:50', '2013-08-09 23:16:50', '', 'Petition', '', 'publish', 'open', 'open', '', 'petition', '', '', '2013-08-09 23:16:50', '2013-08-09 23:16:50', '', 32, 'http://localhost/wp/?page_id=36', 0, 'page', '', 0),
+(37, 2, '2013-08-09 23:16:50', '2013-08-09 23:16:50', '', 'Petition', '', 'inherit', 'open', 'open', '', '36-revision-v1', '', '', '2013-08-09 23:16:50', '2013-08-09 23:16:50', '', 36, 'http://localhost/wp/?p=37', 0, 'revision', '', 0),
+(38, 2, '2013-08-09 23:17:17', '2013-08-09 23:17:17', '', 'Request a Presentation', '', 'publish', 'open', 'open', '', 'request-a-presentation', '', '', '2013-08-09 23:17:17', '2013-08-09 23:17:17', '', 32, 'http://localhost/wp/?page_id=38', 0, 'page', '', 0),
+(39, 2, '2013-08-09 23:17:17', '2013-08-09 23:17:17', '', 'Request a Presentation', '', 'inherit', 'open', 'open', '', '38-revision-v1', '', '', '2013-08-09 23:17:17', '2013-08-09 23:17:17', '', 38, 'http://localhost/wp/?p=39', 0, 'revision', '', 0),
+(40, 2, '2013-08-09 23:17:31', '2013-08-09 23:17:31', '', 'Write a Letter', '', 'publish', 'open', 'open', '', 'write-a-letter', '', '', '2013-08-09 23:17:31', '2013-08-09 23:17:31', '', 32, 'http://localhost/wp/?page_id=40', 0, 'page', '', 0),
+(41, 2, '2013-08-09 23:17:31', '2013-08-09 23:17:31', '', 'Write a Letter', '', 'inherit', 'open', 'open', '', '40-revision-v1', '', '', '2013-08-09 23:17:31', '2013-08-09 23:17:31', '', 40, 'http://localhost/wp/?p=41', 0, 'revision', '', 0),
+(42, 2, '2013-08-09 23:17:51', '2013-08-09 23:17:51', '', 'Meet Your Legislator', '', 'publish', 'open', 'open', '', 'meet-your-legislator', '', '', '2013-08-09 23:17:51', '2013-08-09 23:17:51', '', 32, 'http://localhost/wp/?page_id=42', 0, 'page', '', 0),
+(43, 2, '2013-08-09 23:17:51', '2013-08-09 23:17:51', '', 'Meet Your Legislator', '', 'inherit', 'open', 'open', '', '42-revision-v1', '', '', '2013-08-09 23:17:51', '2013-08-09 23:17:51', '', 42, 'http://localhost/wp/?p=43', 0, 'revision', '', 0),
+(44, 2, '2013-08-09 23:18:04', '2013-08-09 23:18:04', '', 'Resources', '', 'publish', 'open', 'open', '', 'resources', '', '', '2013-08-09 23:18:04', '2013-08-09 23:18:04', '', 0, 'http://localhost/wp/?page_id=44', 0, 'page', '', 0),
+(45, 2, '2013-08-09 23:18:04', '2013-08-09 23:18:04', '', 'Resources', '', 'inherit', 'open', 'open', '', '44-revision-v1', '', '', '2013-08-09 23:18:04', '2013-08-09 23:18:04', '', 44, 'http://localhost/wp/?p=45', 0, 'revision', '', 0),
+(46, 2, '2013-08-09 23:18:18', '2013-08-09 23:18:18', '', 'Experience', '', 'publish', 'open', 'open', '', 'experience', '', '', '2013-08-09 23:18:18', '2013-08-09 23:18:18', '', 44, 'http://localhost/wp/?page_id=46', 0, 'page', '', 0),
+(47, 2, '2013-08-09 23:18:18', '2013-08-09 23:18:18', '', 'Experience', '', 'inherit', 'open', 'open', '', '46-revision-v1', '', '', '2013-08-09 23:18:18', '2013-08-09 23:18:18', '', 46, 'http://localhost/wp/?p=47', 0, 'revision', '', 0),
+(48, 2, '2013-08-09 23:18:32', '2013-08-09 23:18:32', '', 'Education', '', 'publish', 'open', 'open', '', 'education', '', '', '2013-08-09 23:18:32', '2013-08-09 23:18:32', '', 44, 'http://localhost/wp/?page_id=48', 0, 'page', '', 0),
+(49, 2, '2013-08-09 23:18:32', '2013-08-09 23:18:32', '', 'Education', '', 'inherit', 'open', 'open', '', '48-revision-v1', '', '', '2013-08-09 23:18:32', '2013-08-09 23:18:32', '', 48, 'http://localhost/wp/?p=49', 0, 'revision', '', 0),
+(50, 2, '2013-08-09 23:18:45', '2013-08-09 23:18:45', '', 'Exams', '', 'publish', 'open', 'open', '', 'exams', '', '', '2013-08-09 23:18:45', '2013-08-09 23:18:45', '', 44, 'http://localhost/wp/?page_id=50', 0, 'page', '', 0),
+(51, 2, '2013-08-09 23:18:45', '2013-08-09 23:18:45', '', 'Exams', '', 'inherit', 'open', 'open', '', '50-revision-v1', '', '', '2013-08-09 23:18:45', '2013-08-09 23:18:45', '', 50, 'http://localhost/wp/?p=51', 0, 'revision', '', 0),
+(52, 2, '2013-08-09 23:18:57', '2013-08-09 23:18:57', '', 'CEU''s', '', 'publish', 'open', 'open', '', 'ceus', '', '', '2013-08-09 23:18:57', '2013-08-09 23:18:57', '', 44, 'http://localhost/wp/?page_id=52', 0, 'page', '', 0),
+(53, 2, '2013-08-09 23:18:57', '2013-08-09 23:18:57', '', 'CEU''s', '', 'inherit', 'open', 'open', '', '52-revision-v1', '', '', '2013-08-09 23:18:57', '2013-08-09 23:18:57', '', 52, 'http://localhost/wp/?p=53', 0, 'revision', '', 0),
+(54, 2, '2013-08-09 23:19:08', '2013-08-09 23:19:08', '', 'Contact', '', 'publish', 'open', 'open', '', 'contact', '', '', '2013-08-09 23:19:08', '2013-08-09 23:19:08', '', 0, 'http://localhost/wp/?page_id=54', 0, 'page', '', 0),
+(55, 2, '2013-08-09 23:19:08', '2013-08-09 23:19:08', '', 'Contact', '', 'inherit', 'open', 'open', '', '54-revision-v1', '', '', '2013-08-09 23:19:08', '2013-08-09 23:19:08', '', 54, 'http://localhost/wp/?p=55', 0, 'revision', '', 0),
+(103, 2, '2013-08-09 23:33:09', '2013-08-09 23:33:09', ' ', '', '', 'publish', 'open', 'open', '', '103', '', '', '2013-08-09 23:40:01', '2013-08-09 23:40:01', '', 0, 'http://localhost/wp/?p=103', 1, 'nav_menu_item', '', 0),
+(102, 2, '2013-08-09 23:29:59', '2013-08-09 23:29:59', ' ', '', '', 'publish', 'open', 'open', '', '102', '', '', '2013-08-09 23:30:11', '2013-08-09 23:30:11', '', 91, 'http://localhost/wp/?p=102', 5, 'nav_menu_item', '', 0),
+(101, 2, '2013-08-09 23:29:59', '2013-08-09 23:29:59', ' ', '', '', 'publish', 'open', 'open', '', '101', '', '', '2013-08-09 23:30:12', '2013-08-09 23:30:12', '', 91, 'http://localhost/wp/?p=101', 6, 'nav_menu_item', '', 0),
+(100, 2, '2013-08-09 23:29:59', '2013-08-09 23:29:59', ' ', '', '', 'publish', 'open', 'open', '', '100', '', '', '2013-08-09 23:30:12', '2013-08-09 23:30:12', '', 91, 'http://localhost/wp/?p=100', 7, 'nav_menu_item', '', 0),
+(99, 2, '2013-08-09 23:29:59', '2013-08-09 23:29:59', ' ', '', '', 'publish', 'open', 'open', '', '99', '', '', '2013-08-09 23:30:11', '2013-08-09 23:30:11', '', 0, 'http://localhost/wp/?p=99', 4, 'nav_menu_item', '', 0),
+(98, 2, '2013-08-09 23:27:17', '2013-08-09 23:27:17', '', 'Photo Gallery', '', 'inherit', 'open', 'open', '', '97-revision-v1', '', '', '2013-08-09 23:27:17', '2013-08-09 23:27:17', '', 97, 'http://localhost/wp/?p=98', 0, 'revision', '', 0),
+(95, 2, '2013-08-09 23:27:06', '2013-08-09 23:27:06', '', 'Calendar', '', 'publish', 'open', 'open', '', 'calendar', '', '', '2013-08-09 23:27:06', '2013-08-09 23:27:06', '', 91, 'http://localhost/wp/?page_id=95', 0, 'page', '', 0),
+(94, 2, '2013-08-09 23:26:54', '2013-08-09 23:26:54', '', 'Blog', '', 'inherit', 'open', 'open', '', '93-revision-v1', '', '', '2013-08-09 23:26:54', '2013-08-09 23:26:54', '', 93, 'http://localhost/wp/?p=94', 0, 'revision', '', 0),
+(93, 2, '2013-08-09 23:26:54', '2013-08-09 23:26:54', '', 'Blog', '', 'publish', 'open', 'open', '', 'blog', '', '', '2013-08-09 23:26:54', '2013-08-09 23:26:54', '', 91, 'http://localhost/wp/?page_id=93', 0, 'page', '', 0),
+(92, 2, '2013-08-09 23:26:41', '2013-08-09 23:26:41', '', 'News & Events', '', 'inherit', 'open', 'open', '', '91-revision-v1', '', '', '2013-08-09 23:26:41', '2013-08-09 23:26:41', '', 91, 'http://localhost/wp/?p=92', 0, 'revision', '', 0),
+(97, 2, '2013-08-09 23:27:17', '2013-08-09 23:27:17', '', 'Photo Gallery', '', 'publish', 'open', 'open', '', 'photo-gallery', '', '', '2013-08-09 23:27:17', '2013-08-09 23:27:17', '', 91, 'http://localhost/wp/?page_id=97', 0, 'page', '', 0),
+(96, 2, '2013-08-09 23:27:06', '2013-08-09 23:27:06', '', 'Calendar', '', 'inherit', 'open', 'open', '', '95-revision-v1', '', '', '2013-08-09 23:27:06', '2013-08-09 23:27:06', '', 95, 'http://localhost/wp/?p=96', 0, 'revision', '', 0),
+(91, 2, '2013-08-09 23:26:41', '2013-08-09 23:26:41', '', 'News & Events', '', 'publish', 'open', 'open', '', 'news-events', '', '', '2013-08-09 23:26:41', '2013-08-09 23:26:41', '', 0, 'http://localhost/wp/?page_id=91', 0, 'page', '', 0),
+(71, 2, '2013-08-09 23:23:36', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2013-08-09 23:23:36', '0000-00-00 00:00:00', '', 0, 'http://localhost/wp/?page_id=71', 0, 'page', '', 0),
+(72, 2, '2013-08-09 23:26:19', '2013-08-09 23:26:19', ' ', '', '', 'publish', 'open', 'open', '', '72', '', '', '2013-08-09 23:30:11', '2013-08-09 23:30:11', '', 0, 'http://localhost/wp/?p=72', 1, 'nav_menu_item', '', 0),
+(73, 2, '2013-08-09 23:26:19', '2013-08-09 23:26:19', '', 'FAQ''s', '', 'publish', 'open', 'open', '', 'faqs-2', '', '', '2013-08-09 23:30:11', '2013-08-09 23:30:11', '', 12, 'http://localhost/wp/?p=73', 3, 'nav_menu_item', '', 0),
+(74, 2, '2013-08-09 23:26:19', '2013-08-09 23:26:19', ' ', '', '', 'publish', 'open', 'open', '', '74', '', '', '2013-08-09 23:30:11', '2013-08-09 23:30:11', '', 12, 'http://localhost/wp/?p=74', 2, 'nav_menu_item', '', 0),
+(75, 2, '2013-08-09 23:25:20', '0000-00-00 00:00:00', ' ', '', '', 'draft', 'open', 'open', '', '', '', '', '2013-08-09 23:25:20', '0000-00-00 00:00:00', '', 0, 'http://localhost/wp/?p=75', 1, 'nav_menu_item', '', 0),
+(76, 2, '2013-08-09 23:26:19', '2013-08-09 23:26:19', ' ', '', '', 'publish', 'open', 'open', '', '76', '', '', '2013-08-09 23:30:12', '2013-08-09 23:30:12', '', 0, 'http://localhost/wp/?p=76', 22, 'nav_menu_item', '', 0),
+(77, 2, '2013-08-09 23:26:19', '2013-08-09 23:26:19', ' ', '', '', 'publish', 'open', 'open', '', '77', '', '', '2013-08-09 23:30:12', '2013-08-09 23:30:12', '', 0, 'http://localhost/wp/?p=77', 11, 'nav_menu_item', '', 0),
+(78, 2, '2013-08-09 23:26:19', '2013-08-09 23:26:19', ' ', '', '', 'publish', 'open', 'open', '', '78', '', '', '2013-08-09 23:30:12', '2013-08-09 23:30:12', '', 32, 'http://localhost/wp/?p=78', 16, 'nav_menu_item', '', 0),
+(79, 2, '2013-08-09 23:26:19', '2013-08-09 23:26:19', ' ', '', '', 'publish', 'open', 'open', '', '79', '', '', '2013-08-09 23:30:12', '2013-08-09 23:30:12', '', 32, 'http://localhost/wp/?p=79', 13, 'nav_menu_item', '', 0),
+(80, 2, '2013-08-09 23:26:19', '2013-08-09 23:26:19', ' ', '', '', 'publish', 'open', 'open', '', '80', '', '', '2013-08-09 23:30:12', '2013-08-09 23:30:12', '', 32, 'http://localhost/wp/?p=80', 14, 'nav_menu_item', '', 0),
+(81, 2, '2013-08-09 23:26:19', '2013-08-09 23:26:19', ' ', '', '', 'publish', 'open', 'open', '', '81', '', '', '2013-08-09 23:30:12', '2013-08-09 23:30:12', '', 32, 'http://localhost/wp/?p=81', 12, 'nav_menu_item', '', 0),
+(82, 2, '2013-08-09 23:26:19', '2013-08-09 23:26:19', ' ', '', '', 'publish', 'open', 'open', '', '82', '', '', '2013-08-09 23:30:12', '2013-08-09 23:30:12', '', 32, 'http://localhost/wp/?p=82', 15, 'nav_menu_item', '', 0),
+(83, 2, '2013-08-09 23:26:19', '2013-08-09 23:26:19', ' ', '', '', 'publish', 'open', 'open', '', '83', '', '', '2013-08-09 23:30:12', '2013-08-09 23:30:12', '', 0, 'http://localhost/wp/?p=83', 8, 'nav_menu_item', '', 0),
+(84, 2, '2013-08-09 23:26:19', '2013-08-09 23:26:19', ' ', '', '', 'publish', 'open', 'open', '', '84', '', '', '2013-08-09 23:30:12', '2013-08-09 23:30:12', '', 2, 'http://localhost/wp/?p=84', 10, 'nav_menu_item', '', 0),
+(85, 2, '2013-08-09 23:26:19', '2013-08-09 23:26:19', ' ', '', '', 'publish', 'open', 'open', '', '85', '', '', '2013-08-09 23:30:12', '2013-08-09 23:30:12', '', 2, 'http://localhost/wp/?p=85', 9, 'nav_menu_item', '', 0),
+(86, 2, '2013-08-09 23:26:19', '2013-08-09 23:26:19', ' ', '', '', 'publish', 'open', 'open', '', '86', '', '', '2013-08-09 23:30:12', '2013-08-09 23:30:12', '', 0, 'http://localhost/wp/?p=86', 17, 'nav_menu_item', '', 0),
+(87, 2, '2013-08-09 23:26:19', '2013-08-09 23:26:19', '', 'CEU''s', '', 'publish', 'open', 'open', '', 'ceus-2', '', '', '2013-08-09 23:30:12', '2013-08-09 23:30:12', '', 44, 'http://localhost/wp/?p=87', 21, 'nav_menu_item', '', 0),
+(88, 2, '2013-08-09 23:26:19', '2013-08-09 23:26:19', ' ', '', '', 'publish', 'open', 'open', '', '88', '', '', '2013-08-09 23:30:12', '2013-08-09 23:30:12', '', 44, 'http://localhost/wp/?p=88', 19, 'nav_menu_item', '', 0),
+(89, 2, '2013-08-09 23:26:19', '2013-08-09 23:26:19', ' ', '', '', 'publish', 'open', 'open', '', '89', '', '', '2013-08-09 23:30:12', '2013-08-09 23:30:12', '', 44, 'http://localhost/wp/?p=89', 20, 'nav_menu_item', '', 0),
+(90, 2, '2013-08-09 23:26:19', '2013-08-09 23:26:19', ' ', '', '', 'publish', 'open', 'open', '', '90', '', '', '2013-08-09 23:30:12', '2013-08-09 23:30:12', '', 44, 'http://localhost/wp/?p=90', 18, 'nav_menu_item', '', 0),
+(107, 2, '2013-08-09 23:33:09', '2013-08-09 23:33:09', ' ', '', '', 'publish', 'open', 'open', '', '107', '', '', '2013-08-09 23:40:01', '2013-08-09 23:40:01', '', 0, 'http://localhost/wp/?p=107', 3, 'nav_menu_item', '', 0),
+(108, 2, '2013-08-09 23:33:09', '2013-08-09 23:33:09', ' ', '', '', 'publish', 'open', 'open', '', '108', '', '', '2013-08-09 23:40:01', '2013-08-09 23:40:01', '', 0, 'http://localhost/wp/?p=108', 2, 'nav_menu_item', '', 0),
+(109, 2, '2013-08-09 23:33:09', '2013-08-09 23:33:09', ' ', '', '', 'publish', 'open', 'open', '', '109', '', '', '2013-08-09 23:40:01', '2013-08-09 23:40:01', '', 0, 'http://localhost/wp/?p=109', 5, 'nav_menu_item', '', 0);
 
 -- --------------------------------------------------------
 
@@ -435,7 +795,35 @@ CREATE TABLE IF NOT EXISTS `wp_term_relationships` (
 INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`, `term_order`) VALUES
 (1, 1, 0),
 (4, 1, 0),
-(8, 1, 0);
+(8, 1, 0),
+(105, 3, 0),
+(109, 3, 0),
+(106, 3, 0),
+(107, 3, 0),
+(108, 3, 0),
+(103, 3, 0),
+(100, 2, 0),
+(101, 2, 0),
+(102, 2, 0),
+(99, 2, 0),
+(72, 2, 0),
+(74, 2, 0),
+(73, 2, 0),
+(76, 2, 0),
+(77, 2, 0),
+(78, 2, 0),
+(79, 2, 0),
+(80, 2, 0),
+(81, 2, 0),
+(82, 2, 0),
+(83, 2, 0),
+(84, 2, 0),
+(85, 2, 0),
+(86, 2, 0),
+(87, 2, 0),
+(88, 2, 0),
+(89, 2, 0),
+(90, 2, 0);
 
 -- --------------------------------------------------------
 
@@ -461,8 +849,8 @@ CREATE TABLE IF NOT EXISTS `wp_term_taxonomy` (
 
 INSERT INTO `wp_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `description`, `parent`, `count`) VALUES
 (1, 1, 'category', '', 0, 3),
-(2, 2, 'nav_menu', '', 0, 0),
-(3, 3, 'nav_menu', '', 0, 0);
+(2, 2, 'nav_menu', '', 0, 22),
+(3, 3, 'nav_menu', '', 0, 6);
 
 -- --------------------------------------------------------
 
@@ -478,7 +866,7 @@ CREATE TABLE IF NOT EXISTS `wp_usermeta` (
   PRIMARY KEY (`umeta_id`),
   KEY `user_id` (`user_id`),
   KEY `meta_key` (`meta_key`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=29 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=33 ;
 
 --
 -- Dumping data for table `wp_usermeta`
@@ -510,9 +898,13 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (23, 2, 'show_admin_bar_front', 'true'),
 (24, 2, 'wp_capabilities', 'a:1:{s:13:"administrator";b:1;}'),
 (25, 2, 'wp_user_level', '10'),
-(26, 2, 'dismissed_wp_pointers', 'wp330_toolbar,wp330_saving_widgets,wp340_choose_image_from_library,wp340_customize_current_theme_link,wp350_media'),
+(26, 2, 'dismissed_wp_pointers', 'wp330_toolbar,wp330_saving_widgets,wp340_choose_image_from_library,wp340_customize_current_theme_link,wp350_media,wp360_revisions'),
 (27, 1, 'managenav-menuscolumnshidden', 'a:4:{i:0;s:11:"link-target";i:1;s:11:"css-classes";i:2;s:3:"xfn";i:3;s:11:"description";}'),
-(28, 1, 'metaboxhidden_nav-menus', 'a:3:{i:0;s:8:"add-post";i:1;s:12:"add-post_tag";i:2;s:15:"add-post_format";}');
+(28, 1, 'metaboxhidden_nav-menus', 'a:3:{i:0;s:8:"add-post";i:1;s:12:"add-post_tag";i:2;s:15:"add-post_format";}'),
+(29, 2, 'wp_dashboard_quick_press_last_post_id', '14'),
+(30, 2, 'nav_menu_recently_edited', '3'),
+(31, 2, 'managenav-menuscolumnshidden', 'a:4:{i:0;s:11:"link-target";i:1;s:11:"css-classes";i:2;s:3:"xfn";i:3;s:11:"description";}'),
+(32, 2, 'metaboxhidden_nav-menus', 'a:3:{i:0;s:8:"add-post";i:1;s:12:"add-post_tag";i:2;s:15:"add-post_format";}');
 
 -- --------------------------------------------------------
 
@@ -543,3 +935,7 @@ CREATE TABLE IF NOT EXISTS `wp_users` (
 INSERT INTO `wp_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `user_email`, `user_url`, `user_registered`, `user_activation_key`, `user_status`, `display_name`) VALUES
 (1, 'admin', '$P$BiIolojzCw7QuxkJf/2RvK0VuTWhjd/', 'admin', 'reyoldesign@gmail.com', '', '2013-07-16 00:21:30', '', 0, 'admin'),
 (2, 'user', '$P$BCTDB6u8cSNC1.40kXI8aKCC6CzXcB.', 'user', 'loyer824@stu.aii.edu', 'http://yo', '2013-08-09 08:56:25', '', 0, 'yo yo');
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
