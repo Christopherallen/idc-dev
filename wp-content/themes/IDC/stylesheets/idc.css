@@ -83,6 +83,7 @@ footer p {
 /* line 69, ../sass/idc.scss */
 footer a {
   color: white;
+  display: inline-block;
 }
 /* line 72, ../sass/idc.scss */
 footer a:hover {

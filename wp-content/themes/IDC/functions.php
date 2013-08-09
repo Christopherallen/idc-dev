@@ -12,10 +12,15 @@ function responsive_scripts_basic()
     //register scripts for our theme  
     wp_register_script('foundation-mod', get_template_directory_uri() . '/javascripts/vendor/jquery.js', array( 'jquery' ), true );  
     wp_register_script('foundation-main', get_template_directory_uri() . '/javascripts/foundation/foundation.js', true );  
-    wp_register_script('foundation-app', get_template_directory_uri() . '/javascripts/foundation/cookie.js', true );  
+    wp_register_script('foundation-app', get_template_directory_uri() . '/javascripts/foundation/cookie.js', true ); 
+    wp_register_script('mean-menu', get_template_directory_uri() . '/javascripts/mean-menu/jquery.meanmenu.2.0.min.js', true );
+     wp_register_script('scripts', get_template_directory_uri() . '/javascripts/scripts.js', true );
     wp_enqueue_script( 'foundation-mod' );  
     wp_enqueue_script( 'foundation-main' );  
-    wp_enqueue_script( 'foundation-app' );  
+    wp_enqueue_script( 'foundation-app' ); 
+    wp_enqueue_script( 'mean-menu' );
+    wp_enqueue_script( 'scripts' );
+
 }  
 add_action( 'wp_enqueue_scripts', 'responsive_scripts_basic', 5 );  
 
