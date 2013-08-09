@@ -2,15 +2,7 @@
 @import "partials/mixins";
 @import "partials/components"; 
 @import "partials/layouts"; 
-
-
-//---Variables---\\
-$pad: 4em;
-$yellow: #999933;
-$brown: #5e601f;
-$light: #ffffcc;
-$blue: #002a29;
-$red: #cc0000;
+@import "settings";
 
 //---Start Main CSS---\\
 .header{
