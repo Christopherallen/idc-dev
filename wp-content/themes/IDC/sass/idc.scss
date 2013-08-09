@@ -1,0 +1,90 @@
+// SMACSS organization
+@import "partials/mixins";
+@import "partials/components"; 
+@import "partials/layouts"; 
+
+
+//---Variables---\\
+$pad: 4em;
+$yellow: #999933;
+$brown: #5e601f;
+$light: #ffffcc;
+$blue: #002a29;
+$red: #cc0000;
+
+//---Start Main CSS---\\
+.header{
+	background-color: $yellow;
+}
+.pad-top{
+	padding-top: $pad;
+}
+.no-pad{
+	padding: 0;
+}
+.center{
+	text-align: center;
+}
+.title{
+	h2{ 
+		margin: 0; color: $blue; 
+	}
+	h6 { 
+		margin: 0 0 0px 0; 
+		color: #959595; 
+	}
+	.top{ 
+		padding-top: 0.7em; 
+	}
+	
+}
+.blog{
+	margin-top: 2.1em;
+	.readmore a{ 
+		color: $red; 
+	}
+}
+.last{
+	margin-bottom: 3em; 
+}
+.action{
+	h2{ 
+		margin: 0; 
+		color: $yellow; 
+	}
+	.top{ 
+		padding-top: 0.7em; 
+	}
+}
+footer{
+	background-color: $blue;
+	height: 30em;
+	border-top: solid 10px $yellow;
+	padding-top: 3em;
+	h1 {
+		color: white;
+	}
+	h3 {
+		color:$yellow; 
+		padding: 1.2em 0 0 0; 
+		margin: 0 0 0 0; 
+	}
+	p {
+		color:$yellow;
+		 padding-top: 0;
+		 margin-top:0;
+	} 
+	a{ 
+		color: white; 
+}
+	a:hover{ 
+		color: $yellow 
+}
+	a:active{ 
+		color:grey; 
+}	
+}
+.quote{
+	border-right: 1px solid $yellow;
+	border-left: 1px solid $yellow;
+}
