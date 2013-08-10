@@ -1,1 +1,8 @@
 //All mixins placed in here
+
+// This is for media query
+@mixin tablet{
+  @media #{$small}{
+    @content;
+  }
+ }

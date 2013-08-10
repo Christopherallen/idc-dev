@@ -12,9 +12,6 @@ $red: #cc0000;
 $pad: 4em;
 
 
-
-
-
 //// Media Queries
 
 $small-screen: 768px;
@@ -28,13 +25,6 @@ $small-screen: 768px;
 
 $screen: "only screen";
 $small: "only screen and (min-width: #{$small-screen})";
-
-@mixin tablet{
-  @media #{$small}{
-    @content;
-  }
- }
-
 
 
 //// Foundation Variables
