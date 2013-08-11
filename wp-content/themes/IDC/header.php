@@ -15,7 +15,6 @@
   		
   		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/stylesheets/app.css" />
   		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/stylesheets/idc.css" />
-      <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/stylesheets/meanmenu.css" />
 		
 		<!-- LOAD SCRIPTS -->
 

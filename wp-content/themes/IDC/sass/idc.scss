@@ -5,22 +5,28 @@
 @import "partials/layouts"; 
 
 
-//---Start Main CSS---\\
+/* #######################################################################
+	IDC SCSS START
+####################################################################### */
 .header{
 	background-color: $yellow;
-	@include tablet{
-		background-color: red;
-	}
+	// @include tablet{
+	// 	background-color: red;
+	// }
 }
+
 .pad-top{
-	padding-top: $pad;
+	padding-top: 4em;
 }
+
 .no-pad{
 	padding: 0;
 }
+
 .center{
 	text-align: center;
 }
+
 .title{
 	h2{ 
 		margin: 0; color: $blue;
@@ -32,17 +38,19 @@
 	.top{ 
 		padding-top: 0.7em; 
 	}
-	
 }
+
 .blog{
 	margin-top: 2.1em;
 	.readmore a{ 
 		color: $red; 
 	}
 }
+
 .last{
 	margin-bottom: 3em; 
 }
+
 .action{
 	h2{ 
 		margin: 0; 
@@ -52,11 +60,13 @@
 		padding-top: 0.7em; 
 	}
 }
+
 footer{
 	background-color: $blue;
 	height: 30em;
 	border-top: solid 10px $yellow;
 	padding-top: 3em;
+	overflow: hidden;
 	h1 {
 		color: white;
 	}
@@ -69,17 +79,30 @@ footer{
 		color:$yellow;
 		 padding-top: 0;
 		 margin-top:0;
-	} 
+	}
+	ul{
+		text-align: center;	
+		height: 30px;
+		li{
+			display: inline;
+			margin: 15px 0.625em;
+			overflow: hidden;
+				@include tablet {
+					padding: 0 1.5em; 	
+				}
+		}
+	}
 	a{ 
-		color: white; 
+		color: white;
+		&:hover{ 
+			color: $yellow 
+		}
+		&:active{ 
+			color:grey; 
+		}
+	}	
 }
-	a:hover{ 
-		color: $yellow 
-}
-	a:active{ 
-		color:grey; 
-}	
-}
+
 .quote{
 	border-right: 1px solid $yellow;
 	border-left: 1px solid $yellow;

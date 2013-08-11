@@ -1,7 +1,7 @@
 
 				
 		<?php wp_footer(); ?>
-		<div class="footer">	
+		<div>	
 		<?php wp_nav_menu( array('menu' => 'Footer Menu' )); ?> 
 		</div>
 		<script src="<?php bloginfo('template_url'); ?>/library/js/scripts.js"></script>
