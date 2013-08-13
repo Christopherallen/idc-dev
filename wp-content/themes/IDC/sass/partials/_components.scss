@@ -115,9 +115,9 @@ a.meanmenu-reveal {
 	.mean-push { 
 		float: left;
 		clear: both; 
-		@include no-pad
+		@include no-pad;
 	}
 }
 .mean-nav .wrapper {
-	@include no-pad
+	@include no-pad;
 }
