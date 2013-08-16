@@ -1,0 +1,2 @@
+gnore sass-cache files.
+*.sass-cache*
