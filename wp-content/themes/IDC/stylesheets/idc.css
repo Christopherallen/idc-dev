@@ -66,55 +66,54 @@ footer {
   height: 30em;
   border-top: solid 10px #999933;
   padding-top: 3em;
-  overflow: hidden;
 }
-/* line 63, ../sass/partials/_base.scss */
+/* line 62, ../sass/partials/_base.scss */
 footer h1 {
   color: white;
 }
-/* line 66, ../sass/partials/_base.scss */
+/* line 65, ../sass/partials/_base.scss */
 footer h3 {
   color: #999933;
   padding: 1.2em 0 0 0;
   margin: 0 0 0 0;
 }
-/* line 71, ../sass/partials/_base.scss */
+/* line 70, ../sass/partials/_base.scss */
 footer p {
   color: #999933;
   padding-top: 0;
   margin-top: 0;
 }
-/* line 76, ../sass/partials/_base.scss */
+/* line 75, ../sass/partials/_base.scss */
 footer ul {
   text-align: center;
   height: 30px;
 }
-/* line 79, ../sass/partials/_base.scss */
+/* line 78, ../sass/partials/_base.scss */
 footer ul li {
   display: inline;
   margin: 15px 0.625em;
   overflow: hidden;
 }
 @media only screen and (min-width: 768px) {
-  /* line 79, ../sass/partials/_base.scss */
+  /* line 78, ../sass/partials/_base.scss */
   footer ul li {
     padding: 0 1.5em;
   }
 }
-/* line 88, ../sass/partials/_base.scss */
+/* line 87, ../sass/partials/_base.scss */
 footer a {
   color: white;
 }
-/* line 90, ../sass/partials/_base.scss */
+/* line 89, ../sass/partials/_base.scss */
 footer a:hover {
   color: #999933;
 }
-/* line 93, ../sass/partials/_base.scss */
+/* line 92, ../sass/partials/_base.scss */
 footer a:active {
   color: grey;
 }
 
-/* line 99, ../sass/partials/_base.scss */
+/* line 98, ../sass/partials/_base.scss */
 .quote {
   border-right: 1px solid #999933;
   border-left: 1px solid #999933;
@@ -124,13 +123,13 @@ footer a:active {
   meanMenu CSS START
 ####################################################################### */
 /* hide the link until viewport size is reached */
-/* line 6, ../sass/partials/_meanmenu.scss */
+/* line 6, ../sass/partials/components/_meanmenu.scss */
 a.meanmenu-reveal {
   display: none;
 }
 
 /* when under viewport size, .mean-container is added to body */
-/* line 12, ../sass/partials/_meanmenu.scss */
+/* line 12, ../sass/partials/components/_meanmenu.scss */
 .mean-container .mean-bar {
   float: left;
   width: 100%;
@@ -140,7 +139,7 @@ a.meanmenu-reveal {
   min-height: 2.625em;
   z-index: 999999;
 }
-/* line 21, ../sass/partials/_meanmenu.scss */
+/* line 21, ../sass/partials/components/_meanmenu.scss */
 .mean-container a.meanmenu-reveal {
   width: 2.813em;
   height: 1.375em;
@@ -159,34 +158,34 @@ a.meanmenu-reveal {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
 }
-/* line 38, ../sass/partials/_meanmenu.scss */
+/* line 38, ../sass/partials/components/_meanmenu.scss */
 .mean-container a.meanmenu-reveal span {
   display: block;
   background: #fff;
   height: 0.188em;
   margin-top: 0.188em;
 }
-/* line 45, ../sass/partials/_meanmenu.scss */
+/* line 45, ../sass/partials/components/_meanmenu.scss */
 .mean-container .mean-nav {
   float: left;
   width: 100%;
   background: #999933;
   margin-top: 2.063em;
 }
-/* line 50, ../sass/partials/_meanmenu.scss */
+/* line 50, ../sass/partials/components/_meanmenu.scss */
 .mean-container .mean-nav ul {
   padding: 0;
   margin: 0;
   width: 100%;
   list-style-type: none;
 }
-/* line 55, ../sass/partials/_meanmenu.scss */
+/* line 55, ../sass/partials/components/_meanmenu.scss */
 .mean-container .mean-nav ul li {
   position: relative;
   float: left;
   width: 100%;
 }
-/* line 60, ../sass/partials/_meanmenu.scss */
+/* line 60, ../sass/partials/components/_meanmenu.scss */
 .mean-container .mean-nav ul li a {
   display: block;
   float: left;
@@ -200,12 +199,12 @@ a.meanmenu-reveal {
   text-decoration: none;
   text-transform: uppercase;
 }
-/* line 72, ../sass/partials/_meanmenu.scss */
+/* line 72, ../sass/partials/components/_meanmenu.scss */
 .mean-container .mean-nav ul li a:hover {
   background: #252525;
   background: rgba(255, 255, 255, 0.1);
 }
-/* line 76, ../sass/partials/_meanmenu.scss */
+/* line 76, ../sass/partials/components/_meanmenu.scss */
 .mean-container .mean-nav ul li a.mean-expand {
   width: 21.625em;
   height: 1.625em;
@@ -218,16 +217,16 @@ a.meanmenu-reveal {
   z-index: 2;
   font-weight: 700;
 }
-/* line 88, ../sass/partials/_meanmenu.scss */
+/* line 88, ../sass/partials/components/_meanmenu.scss */
 .mean-container .mean-nav ul li a.mean-expand:hover {
   background: none;
 }
-/* line 92, ../sass/partials/_meanmenu.scss */
+/* line 92, ../sass/partials/components/_meanmenu.scss */
 .mean-container .mean-nav ul li.mean-last a {
   border-bottom: none;
   margin-bottom: 0;
 }
-/* line 97, ../sass/partials/_meanmenu.scss */
+/* line 97, ../sass/partials/components/_meanmenu.scss */
 .mean-container .mean-nav ul li li a {
   width: 80%;
   padding: 1em 10%;
@@ -238,7 +237,7 @@ a.meanmenu-reveal {
   text-shadow: none !important;
   visibility: visible;
 }
-/* line 109, ../sass/partials/_meanmenu.scss */
+/* line 109, ../sass/partials/components/_meanmenu.scss */
 .mean-container .mean-push {
   float: left;
   clear: both;
@@ -247,9 +246,14 @@ a.meanmenu-reveal {
   margin: 0;
 }
 
-/* line 115, ../sass/partials/_meanmenu.scss */
+/* line 115, ../sass/partials/components/_meanmenu.scss */
 .mean-nav .wrapper {
   width: 100%;
   padding: 0;
   margin: 0;
+}
+
+/* line 1, ../sass/partials/components/_post.scss */
+.post-container {
+  float: left;
 }
