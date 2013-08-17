@@ -131,19 +131,18 @@ a.meanmenu-reveal {
 /* when under viewport size, .mean-container is added to body */
 /* line 12, ../sass/partials/components/_meanmenu.scss */
 .mean-container .mean-bar {
+  bottom: 28px;
   float: left;
   width: 100%;
   position: relative;
   background: #999933;
   padding: 0.250em 0;
-  min-height: 2.625em;
+  min-height: 75px;
   z-index: 999999;
 }
-/* line 21, ../sass/partials/components/_meanmenu.scss */
+/* line 22, ../sass/partials/components/_meanmenu.scss */
 .mean-container a.meanmenu-reveal {
-  width: 2.813em;
-  height: 1.375em;
-  padding: 0.813em 0.813em 0.688em 0.813em;
+  padding: 15px;
   position: absolute;
   top: 0;
   right: 0;
@@ -158,12 +157,13 @@ a.meanmenu-reveal {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
 }
-/* line 38, ../sass/partials/components/_meanmenu.scss */
+/* line 37, ../sass/partials/components/_meanmenu.scss */
 .mean-container a.meanmenu-reveal span {
   display: block;
   background: #fff;
-  height: 0.188em;
-  margin-top: 0.188em;
+  height: 10px;
+  width: 50px;
+  margin-top: 4px;
 }
 /* line 45, ../sass/partials/components/_meanmenu.scss */
 .mean-container .mean-nav {
