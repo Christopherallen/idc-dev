@@ -119,6 +119,47 @@ footer a:active {
   border-left: 1px solid #999933;
 }
 
+/* line 103, ../sass/partials/_base.scss */
+.slideshow {
+  position: relative;
+  box-shadow: 0px 0px 7px black;
+  -moz-box-shadow: 0px 0px 7px black;
+  -webkit-box-shadow: 0px 0px 7px black;
+}
+/* line 108, ../sass/partials/_base.scss */
+.slideshow h2 {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding-left: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+/* line 117, ../sass/partials/_base.scss */
+.slideshow h4 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding-left: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+}
+/* line 126, ../sass/partials/_base.scss */
+.slideshow #next {
+  position: absolute;
+  right: 0;
+  top: 300px;
+  z-index: 99999;
+}
+/* line 132, ../sass/partials/_base.scss */
+.slideshow #prev {
+  top: 300px;
+  position: absolute;
+  z-index: 99999;
+}
+
 /* #######################################################################
   meanMenu CSS START
 ####################################################################### */

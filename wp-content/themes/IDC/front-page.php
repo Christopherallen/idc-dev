@@ -2,19 +2,24 @@
 
 <div class="row">
   <div class="large-12 columns large-centered pad-top">
-    <div class="slideshow-container">
-      <div class="cycle-slideshow" data-cycle-slides=".slideshow" data-cycle-speed="1000">
 
+<div class=center>
+
+        
+    </div>
+    <div class="slideshow-container">
+      <div class="cycle-slideshow" data-cycle-slides=".slideshow" data-cycle-speed="1000" data-cycle-prev="#prev" data-cycle-next="#next">
+        <!-- <span id="next"><img src="images/prev.jpg" alt=""></span>
+        <span id="prev"><img src="images/next.jpg" alt=""></span> -->
 <?php $thumbnails = get_posts('numberposts=5');
 foreach ($thumbnails as $thumbnail) {
   if ( has_post_thumbnail($thumbnail->ID)) {
-    echo '<div class="slideshow">';
+    echo '<div class="slideshow" >'; 
     echo '<a href="' . get_permalink( $thumbnail->ID ) . '" title="' . esc_attr( $thumbnail->post_title ) . '">';
     echo get_the_post_thumbnail($thumbnail->ID, 'featured');
-    echo '<div class="caption ">';
     echo '<h2 class="title">' . ($thumbnail->post_title) . '</h2>';
     echo '<h4 class="excerpt">' . ($thumbnail->post_excerpt) . '</h4>';
-    echo '</div>';
+
     echo '</a>';
     echo '</div>';
     }
