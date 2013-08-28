@@ -149,15 +149,23 @@ footer a:active {
 /* line 126, ../sass/partials/_base.scss */
 .slideshow #next {
   position: absolute;
+  background: url(../images/next.png);
   right: 0;
-  top: 300px;
+  top: 125px;
+  height: 50px;
+  width: 40px;
   z-index: 99999;
+  text-indent: -99999;
 }
-/* line 132, ../sass/partials/_base.scss */
+/* line 136, ../sass/partials/_base.scss */
 .slideshow #prev {
-  top: 300px;
+  top: 125px;
   position: absolute;
+  background: url(../images/prev.png);
+  height: 50px;
+  width: 40px;
   z-index: 99999;
+  text-indent: -99999;
 }
 
 /* #######################################################################

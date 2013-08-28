@@ -14,7 +14,11 @@
 <?php $thumbnails = get_posts('numberposts=5');
 foreach ($thumbnails as $thumbnail) {
   if ( has_post_thumbnail($thumbnail->ID)) {
-    echo '<div class="slideshow" >'; 
+    echo '<div class="slideshow">';
+    echo '<span id="next">';
+    echo '</span>';
+    echo '<span id="prev">';
+    echo '</span>';
     echo '<a href="' . get_permalink( $thumbnail->ID ) . '" title="' . esc_attr( $thumbnail->post_title ) . '">';
     echo get_the_post_thumbnail($thumbnail->ID, 'featured');
     echo '<h2 class="title">' . ($thumbnail->post_title) . '</h2>';
