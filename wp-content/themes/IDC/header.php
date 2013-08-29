@@ -17,7 +17,7 @@
 <!--Menu Start-->
 <header class="large-12 columns header fixed">
 	<div class="row">
-		<nav class="fullmenu">
+		<nav id="nav">
     <?php wp_nav_menu( array('menu' => 'Main Menu' )); ?>  
   		</nav>
 	</div>

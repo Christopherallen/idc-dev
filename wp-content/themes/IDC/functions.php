@@ -24,7 +24,6 @@ function responsive_scripts_basic()
     wp_enqueue_script( 'scripts' );
 
 
-
 }  
 add_action( 'wp_enqueue_scripts', 'responsive_scripts_basic', 5 );  
 

@@ -3,6 +3,8 @@
 ####################################################################### */
 .header{
   background-color: $yellow;
+  z-index: 9999999;
+  padding: 0 0 5px 0;
   // @include tablet{
   //  background-color: red;
   // }
