@@ -3,13 +3,9 @@
 ####################################################################### */
 /* line 4, ../sass/partials/_base.scss */
 .header {
-<<<<<<< HEAD
   background-color: #b6b63e;
-=======
-  background-color: #999933;
   z-index: 9999999;
   padding: 0 0 5px 0;
->>>>>>> 283e7665de84fe84de5f0f73d6a0ffaced9905b1
 }
 
 /* line 13, ../sass/partials/_base.scss */
@@ -27,64 +23,51 @@
   text-align: center;
 }
 
-<<<<<<< HEAD
-/* line 24, ../sass/partials/_base.scss */
+/* line 26, ../sass/partials/_base.scss */
 h2 {
   margin: 0;
   font-family: georgia;
   font-weight: 300;
 }
-/* line 28, ../sass/partials/_base.scss */
+/* line 30, ../sass/partials/_base.scss */
 h2 a {
   color: red;
 }
-/* line 30, ../sass/partials/_base.scss */
+/* line 32, ../sass/partials/_base.scss */
 h2 a:hover {
   color: black;
 }
 
-/* line 37, ../sass/partials/_base.scss */
-=======
-/* line 26, ../sass/partials/_base.scss */
->>>>>>> 283e7665de84fe84de5f0f73d6a0ffaced9905b1
+/* line 39, ../sass/partials/_base.scss */
 .title h2 {
   margin: 0;
   font-family: georgia;
   font-weight: 300;
 }
-/* line 41, ../sass/partials/_base.scss */
+/* line 43, ../sass/partials/_base.scss */
 .title h2 a {
   color: #004a4d;
 }
-<<<<<<< HEAD
-/* line 43, ../sass/partials/_base.scss */
+/* line 45, ../sass/partials/_base.scss */
 .title h2 a:hover {
   color: black;
 }
-/* line 48, ../sass/partials/_base.scss */
-=======
-/* line 29, ../sass/partials/_base.scss */
->>>>>>> 283e7665de84fe84de5f0f73d6a0ffaced9905b1
+/* line 50, ../sass/partials/_base.scss */
 .title h6 {
   margin: 0 0 0px 0;
   color: #959595;
 }
-<<<<<<< HEAD
-/* line 52, ../sass/partials/_base.scss */
-=======
-/* line 33, ../sass/partials/_base.scss */
->>>>>>> 283e7665de84fe84de5f0f73d6a0ffaced9905b1
+/* line 54, ../sass/partials/_base.scss */
 .title .top {
   padding-top: 0.7em;
 }
 
-<<<<<<< HEAD
-/* line 57, ../sass/partials/_base.scss */
+/* line 59, ../sass/partials/_base.scss */
 .blogs {
   margin: 2em 0;
 }
 
-/* line 61, ../sass/partials/_base.scss */
+/* line 63, ../sass/partials/_base.scss */
 .post-date {
   font-size: .7em;
   color: #b0b0b0;
@@ -92,163 +75,87 @@ h2 a:hover {
   font-weight: 300;
 }
 
-/* line 69, ../sass/partials/_base.scss */
-=======
-/* line 38, ../sass/partials/_base.scss */
-.blog {
-  margin-top: 2.1em;
-}
-/* line 40, ../sass/partials/_base.scss */
->>>>>>> 283e7665de84fe84de5f0f73d6a0ffaced9905b1
+/* line 71, ../sass/partials/_base.scss */
 .blog .readmore a {
   color: #cc0000;
 }
 
-<<<<<<< HEAD
-/* line 74, ../sass/partials/_base.scss */
-=======
-/* line 45, ../sass/partials/_base.scss */
->>>>>>> 283e7665de84fe84de5f0f73d6a0ffaced9905b1
+/* line 76, ../sass/partials/_base.scss */
 .last {
   margin-bottom: 3em;
 }
 
-<<<<<<< HEAD
-/* line 79, ../sass/partials/_base.scss */
-=======
-/* line 50, ../sass/partials/_base.scss */
->>>>>>> 283e7665de84fe84de5f0f73d6a0ffaced9905b1
+/* line 81, ../sass/partials/_base.scss */
 .action h2 {
   margin: 0;
   color: #b6b63e;
 }
-<<<<<<< HEAD
-/* line 83, ../sass/partials/_base.scss */
-=======
-/* line 54, ../sass/partials/_base.scss */
->>>>>>> 283e7665de84fe84de5f0f73d6a0ffaced9905b1
+/* line 85, ../sass/partials/_base.scss */
 .action .top {
   padding-top: 0.7em;
 }
 
-<<<<<<< HEAD
-/* line 88, ../sass/partials/_base.scss */
-=======
-/* line 59, ../sass/partials/_base.scss */
->>>>>>> 283e7665de84fe84de5f0f73d6a0ffaced9905b1
+/* line 90, ../sass/partials/_base.scss */
 footer {
   background-color: #002a29;
   height: 30em;
   border-top: solid 10px #b6b63e;
   padding-top: 3em;
 }
-<<<<<<< HEAD
-/* line 93, ../sass/partials/_base.scss */
+/* line 95, ../sass/partials/_base.scss */
 footer h1 {
   color: white;
 }
-/* line 96, ../sass/partials/_base.scss */
-=======
-/* line 64, ../sass/partials/_base.scss */
-footer h1 {
-  color: white;
-}
-/* line 67, ../sass/partials/_base.scss */
->>>>>>> 283e7665de84fe84de5f0f73d6a0ffaced9905b1
+/* line 98, ../sass/partials/_base.scss */
 footer h3 {
   color: #516b6c;
   padding: 1.2em 0 0 0;
   margin: 0 0 0 0;
 }
-<<<<<<< HEAD
-/* line 101, ../sass/partials/_base.scss */
-=======
-/* line 72, ../sass/partials/_base.scss */
->>>>>>> 283e7665de84fe84de5f0f73d6a0ffaced9905b1
+/* line 103, ../sass/partials/_base.scss */
 footer p {
   color: #516b6c;
   padding-top: 0;
   margin-top: 0;
 }
-<<<<<<< HEAD
-/* line 106, ../sass/partials/_base.scss */
-=======
-/* line 77, ../sass/partials/_base.scss */
->>>>>>> 283e7665de84fe84de5f0f73d6a0ffaced9905b1
+/* line 108, ../sass/partials/_base.scss */
 footer ul {
   text-align: center;
   height: 30px;
 }
-<<<<<<< HEAD
-/* line 109, ../sass/partials/_base.scss */
-=======
-/* line 80, ../sass/partials/_base.scss */
->>>>>>> 283e7665de84fe84de5f0f73d6a0ffaced9905b1
+/* line 111, ../sass/partials/_base.scss */
 footer ul li {
   display: inline;
   margin: 15px 0.625em;
   overflow: hidden;
 }
 @media only screen and (min-width: 768px) {
-<<<<<<< HEAD
-  /* line 109, ../sass/partials/_base.scss */
-=======
-  /* line 80, ../sass/partials/_base.scss */
->>>>>>> 283e7665de84fe84de5f0f73d6a0ffaced9905b1
+  /* line 111, ../sass/partials/_base.scss */
   footer ul li {
     padding: 0 1.5em;
   }
 }
-<<<<<<< HEAD
-/* line 118, ../sass/partials/_base.scss */
-footer a {
-  color: white;
-}
 /* line 120, ../sass/partials/_base.scss */
-=======
-/* line 89, ../sass/partials/_base.scss */
 footer a {
   color: white;
 }
-/* line 91, ../sass/partials/_base.scss */
->>>>>>> 283e7665de84fe84de5f0f73d6a0ffaced9905b1
+/* line 122, ../sass/partials/_base.scss */
 footer a:hover {
   color: #b6b63e;
 }
-<<<<<<< HEAD
-/* line 123, ../sass/partials/_base.scss */
-=======
-/* line 94, ../sass/partials/_base.scss */
->>>>>>> 283e7665de84fe84de5f0f73d6a0ffaced9905b1
+/* line 125, ../sass/partials/_base.scss */
 footer a:active {
   color: grey;
 }
 
-<<<<<<< HEAD
-/* line 129, ../sass/partials/_base.scss */
+/* line 131, ../sass/partials/_base.scss */
 .blockquote {
   line-height: 1.6;
   color: #6f6f6f;
   text-align: center;
 }
 
-/* line 137, ../sass/partials/_base.scss */
-=======
-/* line 100, ../sass/partials/_base.scss */
-.quote {
-  border-right: 1px solid #999933;
-  border-left: 1px solid #999933;
-}
-
-/* line 105, ../sass/partials/_base.scss */
-.slideshow {
-  position: relative;
-  box-shadow: 0px 0px 7px black;
-  -moz-box-shadow: 0px 0px 7px black;
-  -webkit-box-shadow: 0px 0px 7px black;
-}
-/* line 110, ../sass/partials/_base.scss */
->>>>>>> 283e7665de84fe84de5f0f73d6a0ffaced9905b1
+/* line 139, ../sass/partials/_base.scss */
 .slideshow h2 {
   position: absolute;
   width: 100%;
@@ -258,11 +165,7 @@ footer a:active {
   padding-left: 10px;
   background-color: rgba(255, 255, 255, 0.5);
 }
-<<<<<<< HEAD
-/* line 146, ../sass/partials/_base.scss */
-=======
-/* line 119, ../sass/partials/_base.scss */
->>>>>>> 283e7665de84fe84de5f0f73d6a0ffaced9905b1
+/* line 148, ../sass/partials/_base.scss */
 .slideshow h4 {
   position: absolute;
   bottom: 0;
@@ -272,11 +175,7 @@ footer a:active {
   background-color: rgba(255, 255, 255, 0.5);
   width: 100%;
 }
-<<<<<<< HEAD
-/* line 155, ../sass/partials/_base.scss */
-=======
-/* line 128, ../sass/partials/_base.scss */
->>>>>>> 283e7665de84fe84de5f0f73d6a0ffaced9905b1
+/* line 157, ../sass/partials/_base.scss */
 .slideshow #next {
   position: absolute;
   background: url(../images/next.png);
@@ -287,11 +186,7 @@ footer a:active {
   z-index: 99999;
   text-indent: -99999;
 }
-<<<<<<< HEAD
-/* line 165, ../sass/partials/_base.scss */
-=======
-/* line 138, ../sass/partials/_base.scss */
->>>>>>> 283e7665de84fe84de5f0f73d6a0ffaced9905b1
+/* line 167, ../sass/partials/_base.scss */
 .slideshow #prev {
   top: 125px;
   position: absolute;
@@ -302,43 +197,43 @@ footer a:active {
   text-indent: -99999;
 }
 
-<<<<<<< HEAD
-/* line 176, ../sass/partials/_base.scss */
+/* line 178, ../sass/partials/_base.scss */
 .slideshow-container {
   height: 350px;
 }
 
-/* line 181, ../sass/partials/_base.scss */
+/* line 183, ../sass/partials/_base.scss */
 .slideshow-cap {
   background: #faf8cf;
   position: relative;
   left: 69%;
   bottom: 220px;
-=======
+}
+
 /* Main Top Menu */
-/* line 3, ../sass/partials/components/mainnav.scss */
+/* line 3, ../sass/partials/components/_mainnav.scss */
 #nav {
   margin: 0 auto;
   padding: 0;
   border-bottom: none;
 }
-/* line 8, ../sass/partials/components/mainnav.scss */
+/* line 8, ../sass/partials/components/_mainnav.scss */
 #nav ul {
   font-size: 16px;
   line-height: 0;
   margin-bottom: 0;
 }
-/* line 13, ../sass/partials/components/mainnav.scss */
+/* line 13, ../sass/partials/components/_mainnav.scss */
 #nav li {
   list-style: none;
   position: relative;
   float: left;
 }
-/* line 17, ../sass/partials/components/mainnav.scss */
+/* line 17, ../sass/partials/components/_mainnav.scss */
 #nav li:hover > ul {
   display: block;
 }
-/* line 20, ../sass/partials/components/mainnav.scss */
+/* line 20, ../sass/partials/components/_mainnav.scss */
 #nav li ul {
   display: none;
   position: absolute;
@@ -348,7 +243,7 @@ footer a:active {
   padding: 5px 0;
   margin: 0;
 }
-/* line 28, ../sass/partials/components/mainnav.scss */
+/* line 28, ../sass/partials/components/_mainnav.scss */
 #nav li ul li a {
   width: 230px;
   padding: 16px 32px;
@@ -358,32 +253,31 @@ footer a:active {
   border-right: 1px solid #5e601f;
   border-left: 1px solid #5e601f;
 }
-/* line 36, ../sass/partials/components/mainnav.scss */
+/* line 36, ../sass/partials/components/_mainnav.scss */
 #nav li ul li a:first-child {
   border-top: none;
 }
-/* line 41, ../sass/partials/components/mainnav.scss */
+/* line 41, ../sass/partials/components/_mainnav.scss */
 #nav li a {
   padding: 30px 24px;
   text-decoration: none;
   color: white;
-  background: #999933;
+  background: #b6b63e;
   float: left;
 }
-/* line 47, ../sass/partials/components/mainnav.scss */
+/* line 47, ../sass/partials/components/_mainnav.scss */
 #nav li a:hover {
   color: #5e601f;
 }
 
-/* line 54, ../sass/partials/components/mainnav.scss */
+/* line 54, ../sass/partials/components/_mainnav.scss */
 .menu-item-76 {
   font-size: 40px;
 }
 
-/* line 58, ../sass/partials/components/mainnav.scss */
+/* line 58, ../sass/partials/components/_mainnav.scss */
 .current-page-parent {
   border-bottom: 5px solid #5e601f;
->>>>>>> 283e7665de84fe84de5f0f73d6a0ffaced9905b1
 }
 
 /* #######################################################################
