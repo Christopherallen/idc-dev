@@ -2,7 +2,7 @@
 <html <?php language_attributes(); ?>>
 	<head>
 		<meta charset="utf-8">
-		<title><?php bloginfo("name"); ?> <?php wp_title("&bull;"); ?></title>
+		<title><?php bloginfo("name"); ?> <?php wp_title(); ?></title>
 		<meta name="application-name" content="<?php bloginfo('name'); ?>" />
 		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
   		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">

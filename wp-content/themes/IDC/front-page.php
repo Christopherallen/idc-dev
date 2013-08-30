@@ -19,12 +19,15 @@ foreach ($thumbnails as $thumbnail) {
     echo '</span>';
     echo '<span id="prev">';
     echo '</span>';
+    echo '<div class="large-8">';
     echo '<a href="' . get_permalink( $thumbnail->ID ) . '" title="' . esc_attr( $thumbnail->post_title ) . '">';
     echo get_the_post_thumbnail($thumbnail->ID, 'featured');
-    echo '<h2 class="title">' . ($thumbnail->post_title) . '</h2>';
-    echo '<h4 class="excerpt">' . ($thumbnail->post_excerpt) . '</h4>';
-
-    echo '</a>';
+    echo '</div>';
+    echo '<div class="large-4 slideshow-cap">';
+    echo '<span class="slideshow-title">' . ($thumbnail->post_title) . '</span>';
+    echo '<span class="slideshow-excerpt">' . ($thumbnail->post_excerpt) . '</span>';
+        echo '</a>';
+    echo '</div>';
     echo '</div>';
     }
   }
@@ -39,9 +42,9 @@ foreach ($thumbnails as $thumbnail) {
     <div class="large-12 columns no-pad info push-12">
       <div class="large-4 columns action top no-pad">
         <h2 class="center top">Donate</h2>
-          <blockquote class="center quote">
+          <div class="blockquote">
             <p><?php the_field('donate'); ?></p>
-          </blockquote>
+          </div>
       </div>
 
       <div class="large-4 columns action top no-pad">

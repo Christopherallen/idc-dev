@@ -32,7 +32,7 @@ add_action( 'wp_enqueue_scripts', 'responsive_scripts_basic', 5 );
 
 /************* Feature Image Profile ********************/
 
-add_image_size('featured', 1024, 350 , true);
+add_image_size('featured', 667, 350 , true);
 
 /************* SIDEBARS ********************/
 
